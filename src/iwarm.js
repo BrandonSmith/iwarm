@@ -36,7 +36,7 @@ window.iwarm = window.iwarm || {};
             return this.items[item_name];
         },
         calculate_net_energy_savings: function(item_name, num_units) {
-            var w = widget.Conversion;
+            var w = iwarm.Conversion;
             var item = this.get_item(item_name);
             var total_weight = (item.weight * num_units) / w.pounds_per_ton;
             var million_btu = item.savings * total_weight;
@@ -44,13 +44,13 @@ window.iwarm = window.iwarm || {};
             return thousand_btu;
         },
         electricity_equivalent: function(item_name, num_units) {
-            var w = widget.Conversion;
+            var w = iwarm.Conversion;
             var net_energy_savings = this.calculate_net_energy_savings(item_name, num_units);
             var calc_electricity_equivalent = Math.abs(net_energy_savings / w.delivered_electricity_equivalent_1000_btu_per_kwh);
             return calc_electricity_equivalent;
         },
         hours_available: function(item_name, num_units, appliance_name) {
-            var w = widget.Conversion;
+            var w = iwarm.Conversion;
             var electricity_equivalent = this.electricity_equivalent(item_name, num_units);
             var appliance = this.get_appliance(appliance_name);
             var hours_available = electricity_equivalent / appliance.kilowatt;
