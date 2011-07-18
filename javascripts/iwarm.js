@@ -14,10 +14,16 @@ window.iwarm = window.iwarm || {};
             this.add_item({short_name:"magazine",name:"Weekly Magazine",weight:3/10,savings:-1.08711086042437});
             
             this.appliances = {};
-            this.add_appliance({short_name:"home_air_conditioner", kilowatt:1.5});
-            this.add_appliance({short_name:"hair_dryer", kilowatt:1.5375});
-            this.add_appliance({short_name:"60W_CFL_lightbulb", kilowatt:0.013});
-            this.add_appliance({short_name:"laptop", kilowatt:0.05});
+            this.add_appliance({short_name:"home_air_conditioner", name:"Home air conditioner", kilowatt:1.5});
+            this.add_appliance({short_name:"hair_dryer", name:"Hair dryer", kilowatt:1.5375});
+            this.add_appliance({short_name:"60W_CFL_lightbulb", name:"60 watt lightbulb", kilowatt:0.013});
+            this.add_appliance({short_name:"laptop", name:"Laptop", kilowatt:0.05});
+        },
+        get_appliances: function() {
+            return this.appliances;
+        },
+        get_items: function() {
+            return this.items;
         },
         add_appliance: function(appliance) {
             if (!this.appliances)
@@ -41,12 +47,12 @@ window.iwarm = window.iwarm || {};
             var total_weight = (item.weight * num_units) / w.pounds_per_ton;
             var million_btu = item.savings * total_weight;
             var thousand_btu = million_btu * 1000;
-            return thousand_btu;
+            return Math.abs(thousand_btu);
         },
         electricity_equivalent: function(item_name, num_units) {
             var w = iwarm.Conversion;
             var net_energy_savings = this.calculate_net_energy_savings(item_name, num_units);
-            var calc_electricity_equivalent = Math.abs(net_energy_savings / w.delivered_electricity_equivalent_1000_btu_per_kwh);
+            var calc_electricity_equivalent = net_energy_savings / w.delivered_electricity_equivalent_1000_btu_per_kwh;
             return calc_electricity_equivalent;
         },
         hours_available: function(item_name, num_units, appliance_name) {
@@ -100,4 +106,16 @@ window.iwarm = window.iwarm || {};
             this.delivered_electricity_equivalent_1000_btu_per_kwh = this.delivered_electricity_equivalent_mmbtu_per_kwh * 1000;
         }
     };
+    w.Utils = {
+        keys: function(obj) {
+            var a = [];
+            $.each(obj, function(k) {
+                a.push(k);
+            });
+            return a;
+        }
+    };
+    
+    w.Products.initialize();
+    w.Conversion.initialize();
 })(window.iwarm);
