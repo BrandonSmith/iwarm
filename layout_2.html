@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Mobile: Demos and Documentation</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.css" />
+    <link rel="stylesheet" href="stylesheets/screen.css" />
+    <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script src="javascripts/iwarm.js"></script>
+    <script src="javascripts/widget.js"></script>
+    <script src="javascripts/jquery.mobile-1.0b2.js"></script>
+</head>
+<body>
+<div data-role="page" id="widget-home" class="listsidebyside">
+    <div data-role="content" data-theme="d">
+        <div class="ui-grid-a">
+            <div id="recyclables" class="ui-block-a block">
+                <div class="list-section">
+                    <h6 class="choose">select recyclable</h6>
+                    <ul data-role="listview" class="widget-list" data-theme="d">
+                        <li><a href="#" data-type="aluminum_can"><img src="images/icons/can.png" alt="Aluminum Can" class="ui-li-icon"/>Aluminum <br>Can</a></li>
+                        <li><a href="#" data-type="glass_bottle"><img src="images/icons/glass_bottle.png" alt="Glass Bottle" class="ui-li-icon"/>Glass Bottle</a></li>
+                        <li><a href="#" data-type="plastic_bottle"><img src="images/icons/plastic_bottle.png" alt="Plastic Bottle" class="ui-li-icon"/>Plastic Bottle</a></li>
+                        <li><a href="#" data-type="magazine"><img src="images/icons/magazine.png" alt="Weekly Magazine" class="ui-li-icon"/>Weekly<br>Magazine</a></li>
+                        <li><a href="#" data-type="plastic_bag"><img src="images/icons/bag.png" alt="Plastic Grocery Bag" class="ui-li-icon"/>Plastic <br>Grocery Bag</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="appliances" class="ui-block-b block">
+                <div class="list-section">
+                    <h6 class="choose">select appliance</h6>
+                    <ul data-role="listview" class="widget-list" data-theme="d">
+                        <li><a href="#" data-type="home_air_conditioner"><img src="images/icons/magazine.png" alt="Air Conditioner" class="ui-li-icon">Air<br>Conditioner</a></li>
+                        <li><a href="#" data-type="hair_dryer"><img src="images/icons/hair.png" alt="Hair Dryer" class="ui-li-icon">Hair Dryer</a></li>
+                        <li><a href="#" data-type="laptop"><img src="images/icons/laptop.png" alt="Laptop Computer" class="ui-li-icon">Laptop<br>Computer</a></li>
+                        <li><a href="#" data-type="60W_CFL_lightbulb"><img src="images/icons/lightbulb.png" alt="60 Watt Bulb" class="ui-li-icon">60 Watt Bulb</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div id="comparison" class="comparison-container hidden">
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <div class="comparison products">
+                        <div>
+                            <div class="sentence">recycling</div>
+                            <div id="recyclable-quantity" class="big-number"></div>
+                            <div id="recyclable-name" class="sentence"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="comparison appliances">
+                        <div>
+                            <div class="sentence">powers</div>
+                            <div id="appliance-quantity" class="big-number"></div>
+                            <div class="sentence">hours of a</div>
+                            <div id="appliance-name" class="sentence"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-container">
+                <input type="range" name="quantity" id="quantity" value="10" min="1" max="50" />
+            </div>
+        </div>
+    
+    </div>
+    <div data-role="footer" data-theme="f">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#share" data-icon="plus">Share</a></li>
+                <li><a href="#" data-icon="plus">Learn More</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="share" data-add-back-btn="true">
+    <div data-role="header" data-theme="f">
+        <h1>Share</h1>
+    </div>
+    <div data-role="content">
+        <h4>Share your RECYCLING impact</h4>
+        <a href="https://twitter.com/share?url=http://wycdwidget&text=I+just+saved+36.7+hours" data-role="button" data-theme="c" data-icon="iwarm-twitter" target="_blank">Twitter</a>
+        <a href="https://www.facebook.com/dialog/feed?app_id=238733602839086& link=http://16cards.com&picture=&name=What You Can Do& caption=&description=&message=I+just+saved+36.7+hours&redirect_uri=http://16cards.com" data-role="button" type="submit" data-theme="b" data-icon="iwarm-facebook" target="_blank">Facebook</a>
+        <h6>Embed on your site:</h6>
+        <textarea>
+JAVASCRIPT WIDGET CODE AVAILABLE FOR COPY HERE
+        </textarea>
+    </div>
+    <div data-role="footer" data-theme="f">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="plus" data-iconpos="top">Learn More</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

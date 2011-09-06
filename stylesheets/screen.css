@@ -1,0 +1,250 @@
+.hidden {
+    display:none;
+}
+
+.listsidebyside .ui-content .ui-listview {
+    margin: 0px;
+}
+
+.listsidebyside .ui-content {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.listsidebyside .ui-block-b .list-section {
+    border-left: 1px solid #333;
+}
+
+.listsidebyside .ui-content .comparison-container .ui-block-b {
+    border-left: 0;
+}
+
+.listsidebyside h6 {
+    padding-left: 35px;
+}
+
+.listsidebyside .ui-icon-arrow-r {
+    display:none;
+}
+
+.listsidebyside .selected {
+    border-top: 5px solid green;
+    border-bottom: 5px solid green;
+}
+
+.listsidebyside .selected.ui-disabled {
+    opacity: 1;
+}
+
+.listsidebyside .ui-grid-a {
+    overflow:visible;
+}
+
+.listsidebyside .block {
+    position:relative;
+}
+
+.listsidebyside .delete-section {
+    position: absolute;
+    top: -22px;
+    left: 35%;
+}
+
+.ui-mobile-viewport {
+    /*overflow-y: hidden;*/
+}
+
+.ui-content {
+    min-height: 275px;
+}
+
+.ui-title {
+    color:#111111;
+}
+
+h6.choose {
+    margin-top: 0;
+}
+
+.horizontal-widget-list .ui-btn-inner {
+    padding-right: 10px;
+}
+
+.widget-list .ui-btn-text {
+    font-size: 0.8em;
+}
+
+.widget-list .ui-li-icon {
+    margin-right: 5px;
+}
+
+.widget-list .ui-li-has-icon .ui-btn-inner a.ui-link-inherit {
+    padding: .7em .7em .7em 15px;
+    padding-left: 35px;
+        height: 28px;
+}
+
+.widget-list-selected .ui-li {
+    border-color: green;
+    border-width: 5px;
+}
+
+#comparison div.ui-slider {
+    width: 87%;
+    margin: 20px;
+}
+
+#comparison input.ui-slider-input {
+    display:none;
+}
+
+.left-line {
+    border-left: 1px solid black;
+}
+
+.products {
+    padding-right: 30px;
+    text-align: right;
+}
+
+.appliances {
+    padding-left: 30px;
+    text-align: left;
+}
+
+.comparison-container {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.sentence {
+    color: #666666;
+    font-size: 0.75em;
+    font-style:italic;
+}
+
+.big-number {
+    font-size: 2.5em;
+    margin: -5px 0;
+}
+
+.ui-icon-iwarm-twitter {
+    background-image: url(../images/icons/twitter.png);
+}
+
+.ui-icon-iwarm-facebook {
+    background-image: url(../images/icons/facebook.png);
+}
+
+
+/* F
+-----------------------------------------------------------------------------------------------------------*/
+
+.ui-bar-f {
+	border: 1px solid 		#679E65;
+	background: 			#111111;
+	color: 					#ffffff;
+	font-weight: bold;
+	text-shadow: 0 -1px 1px #000000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#4D6F5E), to(#3A5849)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #4D6F5E, #3A5849); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #4D6F5E, #3A5849); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #4D6F5E, #3A5849); /* IE10 */
+	background-image:      -o-linear-gradient(top, #4D6F5E, #3A5849); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #4D6F5E, #3A5849);
+}
+.ui-bar-f, 
+.ui-bar-f input, 
+.ui-bar-f select, 
+.ui-bar-f textarea, 
+.ui-bar-f button {
+	font-family: Helvetica, Arial, sans-serif;
+}
+.ui-bar-f .ui-link-inherit {
+	color: 					#fff;
+}
+.ui-bar-f .ui-link {
+	color: 					#7cc4e7;
+	font-weight: bold;
+}
+.ui-body-f {
+	border: 1px solid 		#2A2A2A;
+	background: 			#222222;
+	color: 					#fff;
+	 text-shadow: 0 1px 0 	#000;
+	font-weight: normal;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#666), to(#222)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #666, #222); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #666, #222); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #666, #222); /* IE10 */
+	background-image:      -o-linear-gradient(top, #666, #222); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #666, #222);	
+}
+.ui-body-f,
+.ui-body-f input,
+.ui-body-f select,
+.ui-body-f textarea,
+.ui-body-f button {
+	font-family: Helvetica, Arial, sans-serif;
+}
+.ui-body-f .ui-link-inherit {
+	color: 					#fff;
+}
+.ui-body-f .ui-link {
+	color: 					#2489CE;
+	font-weight: bold;
+}
+.ui-btn-up-f {
+	border: 1px solid 		#557353;
+	background: 			#6B9169;
+	font-weight: bold;
+	color: 					#fff;
+	text-shadow: 0 -1px 1px #000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#679E65), to(#6B9169)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #679E65, #6B9169); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #679E65, #6B9169); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #679E65, #6B9169); /* IE10 */
+	background-image:      -o-linear-gradient(top, #679E65, #6B9169); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #679E65, #6B9169);
+}
+.ui-btn-up-f a.ui-link-inherit {
+	color: 					#fff;
+}
+.ui-btn-hover-f {
+	border: 1px solid 		#000;
+	background: 			#444444;
+	font-weight: bold;
+	color: 					#fff;
+	text-shadow: 0 -1px 1px #000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#666), to(#444)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #666, #444); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #666, #444); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #666, #444); /* IE10 */
+	background-image:      -o-linear-gradient(top, #666, #444); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #666, #444);
+}
+.ui-btn-hover-f a.ui-link-inherit {
+	color: 					#fff;
+}
+.ui-btn-down-f {
+	border: 1px solid 		#000;
+	background: 			#3d3d3d;
+	font-weight: bold;
+	color: 					#fff;
+	text-shadow: 0 -1px 1px #000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#5a5a5a)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #333, #5a5a5a); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(top, #333, #5a5a5a); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #333, #5a5a5a); /* IE10 */
+	background-image:      -o-linear-gradient(top, #333, #5a5a5a); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #333, #5a5a5a);
+}
+.ui-btn-down-f a.ui-link-inherit {
+	color: 					#fff;
+}
+.ui-btn-up-f,
+.ui-btn-hover-f,
+.ui-btn-down-f {
+	font-family: Helvetica, Arial, sans-serif;
+	text-decoration: none;
+}
