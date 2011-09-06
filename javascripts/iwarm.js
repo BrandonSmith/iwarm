@@ -6,18 +6,18 @@ window.iwarm = window.iwarm || {};
         appliances:null,
         initialize: function() {
             this.items = {};
-            this.add_item({short_name:"aluminum_can",name:"Aluminum can (12 fl. oz.)",weight:0.02923121894183,savings:-206.949619523587});
-            this.add_item({short_name:"glass_bottle",name:"Glass bottle (12 fl. oz.)",weight:22/24,savings:-2.65280981969929});
-            this.add_item({short_name:"plastic_bag",name:"Plastic Grocery Bag",weight:0.77/100,savings:-51.431427964035});
-            this.add_item({short_name:"plastic_bottle",name:"Plastic Bottle (20 fl. oz.)",weight:0.055555555555556,savings:-53.3593464139873});
-            this.add_item({short_name:"newspaper",name:"Daily Newspaper",weight:0.8125,savings:-16.9024813798736});
-            this.add_item({short_name:"magazine",name:"Weekly Magazine",weight:3/10,savings:-1.08711086042437});
+            this.add_item({short_name:"aluminum_can",friendly_name:'aluminum cans',name:"Aluminum can (12 fl. oz.)",weight:0.02923121894183,savings:-206.949619523587});
+            this.add_item({short_name:"glass_bottle",friendly_name:'glass bottles',name:"Glass bottle (12 fl. oz.)",weight:22/24,savings:-2.65280981969929});
+            this.add_item({short_name:"plastic_bag",friendly_name:'plastic bags',name:"Plastic Grocery Bag",weight:0.77/100,savings:-51.431427964035});
+            this.add_item({short_name:"plastic_bottle",friendly_name:'plastic bottles',name:"Plastic Bottle (20 fl. oz.)",weight:0.055555555555556,savings:-53.3593464139873});
+            this.add_item({short_name:"newspaper",friendly_name:'newspapers',name:"Daily Newspaper",weight:0.8125,savings:-16.9024813798736});
+            this.add_item({short_name:"magazine",friendly_name:'magazines',name:"Weekly Magazine",weight:3/10,savings:-1.08711086042437});
             
             this.appliances = {};
-            this.add_appliance({short_name:"home_air_conditioner", name:"Home air conditioner", kilowatt:1.5});
-            this.add_appliance({short_name:"hair_dryer", name:"Hair dryer", kilowatt:1.5375});
-            this.add_appliance({short_name:"60W_CFL_lightbulb", name:"60 watt lightbulb", kilowatt:0.013});
-            this.add_appliance({short_name:"laptop", name:"Laptop", kilowatt:0.05});
+            this.add_appliance({short_name:"home_air_conditioner",friendly_name:'air conditioner', name:"Home air conditioner", kilowatt:1.5});
+            this.add_appliance({short_name:"hair_dryer",friendly_name:'hair dryer', name:"Hair dryer", kilowatt:1.5375});
+            this.add_appliance({short_name:"60W_CFL_lightbulb",friendly_name:'60W lightbulb', name:"60 watt lightbulb", kilowatt:0.013});
+            this.add_appliance({short_name:"laptop",friendly_name:'laptop', name:"Laptop", kilowatt:0.05});
         },
         get_appliances: function() {
             return this.appliances;
