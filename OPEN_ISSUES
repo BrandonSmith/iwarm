@@ -15,7 +15,7 @@ FROM PATRICK:
 
 
 FROM CLIENT:
-* Seems whitewashed. Would like to get some definition, perhaps a
+* x Seems whitewashed. Would like to get some definition, perhaps a
 border. Perhaps buttons get some tint to indicate they are buttons.
 * x Try reducing header and footer heights in order to get some more
 space for the main content.
