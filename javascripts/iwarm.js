@@ -133,21 +133,26 @@ window.iwarm = window.iwarm || {};
         return this.each(function(){
             var $this = $(this);              // store the object
             var compressor = kompressor || 1; // set the compressor
+            var is_set = $this.data('fitText');
             
-            if ( options ) { 
-              $.extend( settings, options );
+            if (!is_set) {
+                if ( options ) { 
+                  $.extend( settings, options );
+                }
+                
+                // Resizer() resizes items based on the object width divided by the compressor * 10
+                var resizer = function () {
+                    $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+                };
+                
+                // Call once to set.
+                resizer();
+                
+                // Call on resize. Opera debounces their resize by default. 
+                $(window).resize(resizer);
+                
+                $this.data('fitText', true);
             }
-            
-            // Resizer() resizes items based on the object width divided by the compressor * 10
-            var resizer = function () {
-                $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-            };
-            
-            // Call once to set.
-            resizer();
-            
-            // Call on resize. Opera debounces their resize by default. 
-            $(window).resize(resizer);
         });
     };
 })( jQuery );

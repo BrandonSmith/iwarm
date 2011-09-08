@@ -1,13 +1,11 @@
 $(document).bind("mobileinit", function() {
     $.mobile.page.prototype.options.keepNative = '#quantity';
+    $.mobile.fixedToolbars.setTouchToggleEnabled(false);
 });
 
 $('#widget-home').live('pagecreate', function() { //$(function(){
     var headers = $('div[data-role=header] h1');
     headers.text('');
-    
-    $(".sentence").fitText(1, { minFontSize: '12px', maxFontSize: '36px' });
-    $(".big-number").fitText(1, { minFontSize: '32px', maxFontSize: '120px' });
     
     var recyclable = {},
         recyclable_section = $('#recyclables'),
@@ -39,9 +37,10 @@ $('#widget-home').live('pagecreate', function() { //$(function(){
     
     var comparison_check = function() {
         if (recyclable.selected && appliance.selected) {
-            //console.log(recyclable.selected + ' vs ' + appliance.selected);
             calculate();
             comparison_section.removeClass('hidden');
+            $(".sentence").fitText(1, { minFontSize: '12px' }); //, maxFontSize: '36px'
+            $(".big-number").fitText(0.5, { minFontSize: '32px' }); //, maxFontSize: '120px'
         } else {
             //console.log('blank');
             comparison_section.addClass('hidden');

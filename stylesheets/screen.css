@@ -39,12 +39,6 @@
     border-left: 0;
 }
 
-/*
-.listsidebyside h6 {
-    padding-left: 35px;
-}
-*/
-
 .listsidebyside .ui-icon-arrow-r {
     display:none;
 }
@@ -112,7 +106,7 @@ h6 .arrow {
 .widget-list .ui-li-has-icon .ui-btn-inner a.ui-link-inherit {
     padding: .7em .7em .7em 15px;
     padding-left: 35px;
-        height: 28px;
+    height: 28px;
 }
 
 #comparison div.ui-slider {
@@ -149,7 +143,7 @@ h6 .arrow {
 
 .big-number {
     font-size: 2.5em;
-    margin: -5px 0;
+    margin: 0;
 }
 
 .ui-icon-iwarm-twitter {
