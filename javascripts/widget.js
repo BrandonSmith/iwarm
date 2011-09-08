@@ -17,6 +17,8 @@ $('#widget-home').live('pagecreate', function() { //$(function(){
         appliance_quantity = $('#appliance-quantity'),
         appliance_name = $('#appliance-name'),
         quantity = $('#quantity'),
+        no_vowel = $('.no-vowel', comparison_section),
+        vowel = $('.vowel', comparison_section),
         products = iwarm.Products;
     
     var calculate = function() {
@@ -37,6 +39,13 @@ $('#widget-home').live('pagecreate', function() { //$(function(){
     
     var comparison_check = function() {
         if (recyclable.selected && appliance.selected) {
+            if (appliance.selected === 'home_air_conditioner') {
+                vowel.removeClass('hidden');
+                no_vowel.addClass('hidden');
+            } else {
+                vowel.addClass('hidden');
+                no_vowel.removeClass('hidden');
+            }
             calculate();
             comparison_section.removeClass('hidden');
             $(".sentence").fitText(1, { minFontSize: '12px' }); //, maxFontSize: '36px'
