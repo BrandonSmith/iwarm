@@ -7,7 +7,7 @@ $('#widget-home').live('pagecreate', function() { //$(function(){
     headers.text('');
     
     $(".sentence").fitText(1, { minFontSize: '12px', maxFontSize: '36px' });
-    $(".big-number").fitText(1, { minFontSize: '36px', maxFontSize: '120px' });
+    $(".big-number").fitText(1, { minFontSize: '32px', maxFontSize: '120px' });
     
     var recyclable = {},
         recyclable_section = $('#recyclables'),
@@ -57,12 +57,14 @@ $('#widget-home').live('pagecreate', function() { //$(function(){
                 selected_recyclable = $(e.target).attr('data-type');
             //console.log(selected_recyclable);
             recyclable.selected = selected_recyclable;
+            recyclable_section.addClass('top-spacer');
             title.hide();
             others.hide();
             li.addClass('selected ui-disabled').removeClass('ui-btn-hover-d');
             var del_section = $('<div class="delete-section"><a href="#" data-role="button" data-icon="delete" data-iconpos="notext">delete</a></div>');
             del_section.find('a').click(function() {
                 recyclable = {};
+                recyclable_section.removeClass('top-spacer');
                 li.removeClass('selected ui-disabled');
                 title.show();
                 li.show().removeClass('ui-btn-hover-d').addClass('ui-btn-up-d');
@@ -84,12 +86,14 @@ $('#widget-home').live('pagecreate', function() { //$(function(){
                 selected_appliance = $(e.target).attr('data-type');
             //console.log(selected_appliance);
             appliance.selected = selected_appliance;
+            appliance_section.addClass('top-spacer');
             title.hide();
             others.hide();
             li.addClass('selected ui-disabled').removeClass('ui-btn-hover-d');
             var del_section = $('<div class="delete-section"><a href="#" data-role="button" data-icon="delete" data-iconpos="notext">delete</a></div>');
             del_section.find('a').click(function() {
                 appliance = {};
+                appliance_section.removeClass('top-spacer');
                 li.removeClass('selected ui-disabled');
                 title.show();
                 li.show().removeClass('ui-btn-hover-d').addClass('ui-btn-up-d');

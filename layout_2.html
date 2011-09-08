@@ -6,18 +6,24 @@
     <title>jQuery Mobile: Demos and Documentation</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.css" />
     <link rel="stylesheet" href="stylesheets/screen.css" />
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
     <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
     <script src="javascripts/iwarm.js"></script>
     <script src="javascripts/widget.js"></script>
     <script src="javascripts/jquery.mobile-1.0b2.js"></script>
 </head>
 <body>
-<div data-role="page" id="widget-home" class="listsidebyside">
-    <div data-role="content" data-theme="d">
+<div data-role="page" id="widget-home" class="listsidebyside" data-theme="d">
+    <!--
+    <div class="by-recycling">
+        <h2>By recycling...</h2>
+    </div>
+    -->
+    <div data-role="content">
         <div class="ui-grid-a">
             <div id="recyclables" class="ui-block-a block">
                 <div class="list-section">
-                    <h6 class="choose">select recyclable</h6>
+                    <h6 class="choose"><span class="arrow"><img src="images/icons/arrow-down.png" alt="select recyclable" /></span>select recyclable</h6>
                     <ul data-role="listview" class="widget-list" data-theme="d">
                         <li><a href="#" data-type="aluminum_can"><img src="images/icons/can.png" alt="Aluminum Can" class="ui-li-icon"/>Aluminum <br>Can</a></li>
                         <li><a href="#" data-type="glass_bottle"><img src="images/icons/glass_bottle.png" alt="Glass Bottle" class="ui-li-icon"/>Glass Bottle</a></li>
@@ -29,9 +35,9 @@
             </div>
             <div id="appliances" class="ui-block-b block">
                 <div class="list-section">
-                    <h6 class="choose">select appliance</h6>
+                    <h6 class="choose"><span class="arrow"><img src="images/icons/arrow-down.png" alt="select recyclable" /></span>select appliance</h6>
                     <ul data-role="listview" class="widget-list" data-theme="d">
-                        <li><a href="#" data-type="home_air_conditioner"><img src="images/icons/magazine.png" alt="Air Conditioner" class="ui-li-icon">Air<br>Conditioner</a></li>
+                        <li><a href="#" data-type="home_air_conditioner"><img src="images/icons/fan.png" alt="Air Conditioner" class="ui-li-icon">Air<br>Conditioner</a></li>
                         <li><a href="#" data-type="hair_dryer"><img src="images/icons/hair.png" alt="Hair Dryer" class="ui-li-icon">Hair Dryer</a></li>
                         <li><a href="#" data-type="laptop"><img src="images/icons/laptop.png" alt="Laptop Computer" class="ui-li-icon">Laptop<br>Computer</a></li>
                         <li><a href="#" data-type="60W_CFL_lightbulb"><img src="images/icons/lightbulb.png" alt="60 Watt Bulb" class="ui-li-icon">60 Watt Bulb</a></li>
@@ -41,7 +47,7 @@
         </div>
     
         <div id="comparison" class="comparison-container hidden">
-            <div class="ui-grid-a">
+            <div class="ui-grid-b">
                 <div class="ui-block-a">
                     <div class="comparison products">
                         <div>
@@ -51,7 +57,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="ui-block-b">
+                <div class="ui-block-b big-arrow" align="center">
+                    <!--<img src="images/icons/arrow.png" />-->
+                </div>
+                <div class="ui-block-c">
                     <div class="comparison appliances">
                         <div>
                             <div class="sentence">powers</div>
@@ -68,7 +77,22 @@
         </div>
     
     </div>
-    <div data-role="footer" data-theme="f">
+    <div data-role="footer" data-theme="b" data-id="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#share">Share your results</a></li>
+                <li><a href="#">Learn more</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--
+    <div data-role="footer" data-theme="b" class="ui-bar">
+        <a href="#share" data-icon="plus">Share your recycling</a>
+        <a href="#" data-icon="plus">Learn more</a>
+    </div>
+    -->
+    <!--
+    <div data-role="footer" data-theme="b">
         <div data-role="navbar">
             <ul>
                 <li><a href="#share" data-icon="plus">Share</a></li>
@@ -76,10 +100,11 @@
             </ul>
         </div>
     </div>
+    -->
 </div>
 
-<div data-role="page" id="share" data-add-back-btn="true">
-    <div data-role="header" data-theme="f">
+<div data-role="page" id="share" data-add-back-btn="true" data-theme="d">
+    <div data-role="header" data-theme="b">
         <h1>Share</h1>
     </div>
     <div data-role="content">
@@ -91,14 +116,28 @@
 JAVASCRIPT WIDGET CODE AVAILABLE FOR COPY HERE
         </textarea>
     </div>
-    <div data-role="footer" data-theme="f">
+    <div data-role="footer" data-theme="b" data-id="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#">Learn more</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--
+    <div data-role="footer" data-theme="b" class="ui-bar">
+        <a href="#" data-icon="plus">Learn more</a>
+    </div>
+    -->
+    <!--
+    <div data-role="footer" data-theme="b">
         <div data-role="navbar">
             <ul>
                 <li><a href="#" data-icon="plus" data-iconpos="top">Learn More</a></li>
             </ul>
         </div>
     </div>
+    -->
 </div>
 
 </body>
-</html>
+</html> 

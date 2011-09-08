@@ -8,16 +8,16 @@ Facebook:
 
 FROM PATRICK:
 1) Need the header
-2) Numbers getting clipped
-3) Blue color pallet to match current website
-4) Smaller footer
-5) Odd grey box
+2) x Numbers getting clipped
+3) x Blue color pallet to match current website
+4) x Smaller footer
+5) x Odd grey box
 
 
 FROM CLIENT:
 * Seems whitewashed. Would like to get some definition, perhaps a
 border. Perhaps buttons get some tint to indicate they are buttons.
-* Try reducing header and footer heights in order to get some more
+* x Try reducing header and footer heights in order to get some more
 space for the main content.
 * Change title to a more simplified "By recycling..."
 * Outline the exact phrasing of social text for Twitter and Facebook.
