@@ -7,7 +7,7 @@ Facebook:
 
 
 FROM PATRICK:
-1) Need the header
+1) x Need the header
 2) x Numbers getting clipped
 3) x Blue color pallet to match current website
 4) x Smaller footer
@@ -19,9 +19,9 @@ FROM CLIENT:
 border. Perhaps buttons get some tint to indicate they are buttons.
 * x Try reducing header and footer heights in order to get some more
 space for the main content.
-* Change title to a more simplified "By recycling..."
+* x Change title to a more simplified "By recycling..."
 * Outline the exact phrasing of social text for Twitter and Facebook.
-* Somehow make the slider more obvious it is affecting product quantity.
+* x Somehow make the slider more obvious it is affecting product quantity.
 * On share page, area to get JavaScript to embed on another page.
 * Investigate changing links externally (perhaps from the JS snippet)
-* Make sure that the slide respond to the keyboard or have an input field to make it compliant with the disabilities act.
+* x Make sure that the slide respond to the keyboard or have an input field to make it compliant with the disabilities act.
