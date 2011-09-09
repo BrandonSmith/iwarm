@@ -14,16 +14,14 @@
 </head>
 <body>
 <div data-role="page" id="widget-home" class="listsidebyside" data-theme="d">
-    <!--
-    <div class="by-recycling">
-        <h2>By recycling...</h2>
+    <div class="ui-header ui-bar-f">
+        <h1 class="by-recycling">By recycling...</h1>
     </div>
-    -->
     <div data-role="content">
         <div class="ui-grid-a">
             <div id="recyclables" class="ui-block-a block">
                 <div class="list-section">
-                    <h6 class="choose"><span class="arrow"><img src="images/icons/arrow-down.png" alt="select recyclable" /></span>select recyclable</h6>
+                    <h6 class="choose"><span class="arrow"><img src="images/icons/arrow-down.png" alt="select recyclable" /></span>choose recyclable</h6>
                     <ul data-role="listview" class="widget-list" data-theme="d">
                         <li><a href="#" data-type="aluminum_can"><img src="images/icons/can.png" alt="Aluminum Can" class="ui-li-icon"/>Aluminum <br>Can</a></li>
                         <li><a href="#" data-type="glass_bottle"><img src="images/icons/glass_bottle.png" alt="Glass Bottle" class="ui-li-icon"/>Glass Bottle</a></li>
@@ -35,12 +33,13 @@
             </div>
             <div id="appliances" class="ui-block-b block">
                 <div class="list-section">
-                    <h6 class="choose"><span class="arrow"><img src="images/icons/arrow-down.png" alt="select recyclable" /></span>select appliance</h6>
+                    <h6 class="choose"><span class="arrow"><img src="images/icons/arrow-down.png" alt="select recyclable" /></span>choose appliance</h6>
                     <ul data-role="listview" class="widget-list" data-theme="d">
                         <li><a href="#" data-type="home_air_conditioner"><img src="images/icons/fan.png" alt="Air Conditioner" class="ui-li-icon">Air<br>Conditioner</a></li>
                         <li><a href="#" data-type="hair_dryer"><img src="images/icons/hair.png" alt="Hair Dryer" class="ui-li-icon">Hair Dryer</a></li>
                         <li><a href="#" data-type="laptop"><img src="images/icons/laptop.png" alt="Laptop Computer" class="ui-li-icon">Laptop<br>Computer</a></li>
                         <li><a href="#" data-type="60W_CFL_lightbulb"><img src="images/icons/lightbulb.png" alt="60 Watt Bulb" class="ui-li-icon">60 Watt Bulb</a></li>
+                        <li style="height:27px;"></li>
                     </ul>
                 </div>
             </div>
@@ -108,11 +107,11 @@
         <h1>Share</h1>
     </div>
     <div data-role="content">
-        <h4>Share your RECYCLING impact</h4>
+        <h2>Share your RECYCLING impact</h2>
         <a href="https://twitter.com/share?url=http://wycdwidget&text=I+just+saved+36.7+hours" data-role="button" data-theme="c" data-icon="iwarm-twitter" target="_blank">Twitter</a>
         <a href="https://www.facebook.com/dialog/feed?app_id=238733602839086& link=http://16cards.com&picture=&name=What You Can Do& caption=&description=&message=I+just+saved+36.7+hours&redirect_uri=http://16cards.com" data-role="button" type="submit" data-theme="b" data-icon="iwarm-facebook" target="_blank">Facebook</a>
-        <h6>Embed on your site:</h6>
-        <textarea>
+        <h4>Embed on your site:</h4>
+        <textarea id="copy-code" onclick="this.focus(); this.select()">
 JAVASCRIPT WIDGET CODE AVAILABLE FOR COPY HERE
         </textarea>
     </div>
