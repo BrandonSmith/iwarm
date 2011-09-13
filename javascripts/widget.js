@@ -31,7 +31,7 @@ $('#widget-home').live('pagecreate', function() { //$(function(){
         
         recyclable_quantity.text(q);
         recyclable_name.text(rec_name);
-        appliance_quantity.text(hours.toFixed(2));
+        appliance_quantity.text(hours.toFixed(1));
         appliance_name.text(app_name);
     };
     
