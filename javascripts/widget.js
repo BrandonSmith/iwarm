@@ -171,6 +171,8 @@
                 }).button();
                 recyclable_section.append(del_section);
                 comparison_check();
+                appliance_section.find('.preview-list-section').hide();
+                appliance_section.find('.list-section').show();
             }
         });
 
