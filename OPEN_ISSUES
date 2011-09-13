@@ -25,3 +25,39 @@ space for the main content.
 * On share page, area to get JavaScript to embed on another page.
 * Investigate changing links externally (perhaps from the JS snippet)
 * x Make sure that the slide respond to the keyboard or have an input field to make it compliant with the disabilities act.
+
+NEW ISSUES:
+
+* Widget looks good in Chrome, looks funky in IE.
+
+* Change Heading of widget to "How much energy can you save by
+recycling?" Colored icons of electricity/recycling should be added.
+Expand heading area as deemed necessary.
+
+* Change "choose appliance" to "power an appliance"
+
+* In initial screen, the appliance column should be faded out and can't
+be selected, so people won't make the mistake of choosing an appliance
+to recycle.
+
+* Air conditioner icon is a fan; change icon to look something like
+this:  (Embedded image moved to file: pic16099.gif)
+
+* Add blue arrow and "Slide the button or use your arrow keys to change
+the number of recyclables" under sliding button bar.
+
+* Calculations should round to the nearest 10th; so 1.21 hours should be
+1.2 hours.
+
+* Facebook sharing does not work.
+
+* Shared text for both Twitter and Facebook should read "By recycling 10
+aluminum cans, I saved enough energy to power an air conditioner for
+1.7 hours. Calculate here: http://1.usa.gov/mS5mrg"
+Bolded text should change depending on what appliance and how much of
+what is recycled (10 and 1.7).
+
+* Final JS
+
+* The Learn More link should take people to www.epa.gov/iwarm ; right now
+the link doesn't work.
