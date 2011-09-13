@@ -43,7 +43,7 @@ to recycle.
 * Air conditioner icon is a fan; change icon to look something like
 this:  (Embedded image moved to file: pic16099.gif)
 
-* Add blue arrow and "Slide the button or use your arrow keys to change
+* x Add blue arrow and "Slide the button or use your arrow keys to change
 the number of recyclables" under sliding button bar.
 
 * x Calculations should round to the nearest 10th; so 1.21 hours should be
