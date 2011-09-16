@@ -84,15 +84,11 @@
     });
     
     $('#share').live('pagebeforeshow', function() {
-        // https://www.facebook.com/dialog/feed?app_id=238733602839086& link=http://16cards.com&picture=&name=What You Can Do& caption=&description=&message=I+just+saved+36.7+hours&redirect_uri=http://16cards.com
         var twitter = $('#twitter'),
             facebook = $('#facebook');
         
         twitter.attr('href', 'https://twitter.com/share?url=http://1.usa.gov/mS5mrg&text='+encodeURIComponent(get_share_text()))
-        
-        facebook.click(function() {
-            console.log(get_share_text());
-        });
+        facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&link=http://16cards.com&picture=&name=What You Can Do&caption=&description=&redirect_uri=http://16cards.com&message='+encodeURIComponent(get_share_text()));
     });
     
     $('#widget-home').live('pagecreate', function() {
@@ -110,6 +106,9 @@
         no_vowel = $('.no-vowel', comparison_section);
         vowel = $('.vowel', comparison_section);
         
+        var choose_header = $('.choose.slide');
+        var do_hide = true;
+        
         var calculate = function() {
             var q = quantity.val(),
                 rec = products.get_item(recyclable.selected),
@@ -123,8 +122,18 @@
             appliance_quantity.text(hours.toFixed(1));
             appliance_name.text(app_name);
         };
+        
+        var hide_and_calculate = function() {
+            calculate();
+            if (do_hide) {
+                do_hide = false;
+                choose_header.fadeOut(500, function() {
+                    choose_header.hide();
+                });
+            }
+        }
 
-        quantity.slider({change: calculate});
+        quantity.slider({change: hide_and_calculate});
 
         var comparison_check = function() {
             if (recyclable.selected && appliance.selected) {
@@ -139,8 +148,15 @@
                 comparison_section.removeClass('hidden');
                 $(".sentence").fitText(1, { minFontSize: '12px' }); //, maxFontSize: '36px'
                 $(".big-number").fitText(0.5, { minFontSize: '32px' }); //, maxFontSize: '120px'
+                
+                var arrow = $('.arrow', choose_header);
+                var slider_btn = $('.ui-slider-handle');
+                var slider_btn_coords = slider_btn.offset();
+                arrow.offset({
+                    top: slider_btn_coords.top + slider_btn.height() + 5,
+                    left: slider_btn_coords.left + (slider_btn.width() / 2)
+                })
             } else {
-                //console.log('blank');
                 comparison_section.addClass('hidden');
             }
         };
@@ -150,7 +166,7 @@
             var li = $(this).parents('li');
             if (!li.hasClass('selected')) {
                 var others = li.siblings(),
-                    title = recyclable_section.find('h6'),
+                    title = recyclable_section.find('.choose'),
                     selected_recyclable = $(e.target).attr('data-type');
                 //console.log(selected_recyclable);
                 recyclable.selected = selected_recyclable;
@@ -181,7 +197,7 @@
             var li = $(this).parents('li');
             if (!li.hasClass('selected')) {
                 var others = li.siblings(),
-                    title = appliance_section.find('h6'),
+                    title = appliance_section.find('.choose'),
                     selected_appliance = $(e.target).attr('data-type');
                 //console.log(selected_appliance);
                 appliance.selected = selected_appliance;
@@ -206,3 +222,10 @@
         });
     });
 })(jQuery);
+
+window.fbAsyncInit = function() {
+    FB.init({
+      appId  : '148678911893871',
+      status : false
+    });
+}

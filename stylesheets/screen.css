@@ -2,13 +2,34 @@
     display:none;
 }
 
+.sc {
+    font-variant:small-caps;
+    font-size: 0.75em;
+}
+
+.air-cond {
+    left: 5px;
+}
+
 .top-spacer {
-    margin-top: 15px;
+    margin-top: 19px;
 }
 
 h1.by-recycling {
-    font-family: 'Permanent Marker', cursive;
-    margin: 0 0 0 20px;
+    /*font-family: 'Permanent Marker', cursive;*/
+    /*margin: 0 0 0 20px;*/
+}
+
+h1.by-recycling span {
+    display:none;
+}
+
+#widget-home .ui-header {
+    text-align: center;
+}
+
+#widget-home .ui-header h1 {
+    margin: 0;
 }
 
 .listsidebyside .ui-grid-b .ui-block-a {
@@ -80,28 +101,28 @@ h1.by-recycling {
     color:#111111;
 }
 
-h6.choose {
-    margin: 0 0 6px 35px;
+.choose {
+    margin: 0 0 5px 10px;
     position: relative;
     color: #145072;
-    /*text-shadow: 0px 1px 4px #eeeeee;*/
 }
 
-h6.choose .arrow {
+.choose .arrow {
     position: absolute;
-    left: -20px;
-    top: 6px;
+    left: 10px;
+    top: 15px;
     z-index: 100;
 }
 
-h6.slide.choose {
-    margin: 10px 75px 0px 75px;
+.slide.choose {
+    width: 87%;
+    margin: 20px 20px 10px 20px;
 }
 
-h6.slide.choose .arrow {
+.slide.choose .arrow {
     position: absolute;
-    left: -20px;
-    top: -10px;
+    left: 20px;
+    top: 0px;
     z-index: 100;
 }
 
@@ -146,7 +167,6 @@ h6.slide.choose .arrow {
 
 .comparison-container {
     margin-top: 80px;
-    /*margin-bottom: 10px;*/
 }
 
 .sentence {
@@ -174,14 +194,11 @@ h6.slide.choose .arrow {
 }
 
 #share h2 {
-    font-family: 'Permanent Marker', cursive;
     color: #456f9a;
-    /*text-shadow: 0px 1px 4px #eeeeee;*/
     margin: 0;
 }
 
 #share h4 {
-    font-family: 'Permanent Marker', cursive;
     color: #456f9a;
     margin: 15px 0 10px 0;
 }
@@ -196,12 +213,14 @@ h6.slide.choose .arrow {
 	color: 					#fff;
 	font-weight: bold;
 	text-shadow: 0 -1px 1px #254f7a;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#81a8ce), to(#5e87b0)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient(top, #81a8ce, #5e87b0); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient(top, #81a8ce, #5e87b0); /* FF3.6 */
-	background-image:     -ms-linear-gradient(top, #81a8ce, #5e87b0); /* IE10 */
-	background-image:      -o-linear-gradient(top, #81a8ce, #5e87b0); /* Opera 11.10+ */
+	/*
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#81a8ce), to(#5e87b0));
+	background-image: -webkit-linear-gradient(top, #81a8ce, #5e87b0);
+	background-image:    -moz-linear-gradient(top, #81a8ce, #5e87b0);
+	background-image:     -ms-linear-gradient(top, #81a8ce, #5e87b0);
+	background-image:      -o-linear-gradient(top, #81a8ce, #5e87b0);
 	background-image:         linear-gradient(top, #81a8ce, #5e87b0);
+	*/
 }
 .ui-bar-f, 
 .ui-bar-f input, 
