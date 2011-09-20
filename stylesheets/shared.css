@@ -1,0 +1,66 @@
+.hidden {
+    display:none;
+}
+
+.sc {
+    font-variant:small-caps;
+    font-size: 0.75em;
+}
+
+#comparison input.ui-slider-input {
+    display:none;
+}
+
+.listsidebyside .block {
+    position:relative;
+}
+
+.listsidebyside .selected.ui-disabled {
+    opacity: 1;
+}
+
+.listsidebyside .ui-grid-b .ui-block-a {
+    width: 40%;
+}
+
+.listsidebyside .ui-grid-b .ui-block-b {
+    width: 20%;
+}
+
+.listsidebyside .ui-grid-b .ui-block-c {
+    width: 40%;
+}
+
+
+.products {
+    text-align: right;
+}
+
+.appliances {
+    text-align: left;
+}
+
+
+.sentence {
+    color: #666666;
+    font-size: 0.75em;
+    font-style:italic;
+}
+
+.big-number {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.ui-icon-iwarm-twitter {
+    background-image: url(../images/icons/twitter.png);
+}
+
+.ui-icon-iwarm-facebook {
+    background-image: url(../images/icons/facebook.png);
+}
+
+#comparison div.ui-slider {
+    width: 87%;
+    margin: 10px 20px 10px 20px;
+}

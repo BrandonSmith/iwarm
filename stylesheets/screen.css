@@ -1,23 +1,9 @@
-.hidden {
-    display:none;
-}
-
-.sc {
-    font-variant:small-caps;
-    font-size: 0.75em;
-}
-
 .air-cond {
     left: 5px;
 }
 
 .top-spacer {
     margin-top: 19px;
-}
-
-h1.by-recycling {
-    /*font-family: 'Permanent Marker', cursive;*/
-    /*margin: 0 0 0 20px;*/
 }
 
 h1.by-recycling span {
@@ -30,18 +16,6 @@ h1.by-recycling span {
 
 #widget-home .ui-header h1 {
     margin: 0;
-}
-
-.listsidebyside .ui-grid-b .ui-block-a {
-    width: 40%;
-}
-
-.listsidebyside .ui-grid-b .ui-block-b {
-    width: 20%;
-}
-
-.listsidebyside .ui-grid-b .ui-block-c {
-    width: 40%;
 }
 
 .listsidebyside .ui-content .ui-listview {
@@ -61,6 +35,7 @@ h1.by-recycling span {
     border-left: 0;
 }
 
+/* hide the default arrow icon in the list */
 .listsidebyside .ui-icon-arrow-r {
     display:none;
 }
@@ -70,31 +45,18 @@ h1.by-recycling span {
     border-bottom: 5px solid #2567AB;
 }
 
-.listsidebyside .selected.ui-disabled {
-    opacity: 1;
-}
-
 .listsidebyside .ui-grid-a {
     overflow:visible;
 }
 
-.listsidebyside .block {
-    position:relative;
-}
-
-.listsidebyside .delete-section {
+.delete-section {
     position: absolute;
     top: -22px;
     left: 35%;
 }
 
-.ui-mobile-viewport {
-    /*overflow-y: hidden;*/
-}
-
 .ui-content {
     min-height: 275px;
-
 }
 
 .ui-title {
@@ -126,10 +88,6 @@ h1.by-recycling span {
     z-index: 100;
 }
 
-.horizontal-widget-list .ui-btn-inner {
-    padding-right: 10px;
-}
-
 .widget-list .ui-btn-text {
     font-size: 0.8em;
 }
@@ -149,58 +107,13 @@ h1.by-recycling span {
     margin: 10px 20px 10px 20px;
 }
 
-#comparison input.ui-slider-input {
-    display:none;
-}
-
 .left-line {
     border-left: 1px solid black;
 }
 
-.products {
-    text-align: right;
-}
-
-.appliances {
-    text-align: left;
-}
 
 .comparison-container {
     margin-top: 80px;
-}
-
-.sentence {
-    color: #666666;
-    font-size: 0.75em;
-    font-style:italic;
-}
-
-.big-number {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-.ui-icon-iwarm-twitter {
-    background-image: url(../images/icons/twitter.png);
-}
-
-.ui-icon-iwarm-facebook {
-    background-image: url(../images/icons/facebook.png);
-}
-
-#copy-code {
-    /*width: 100%;*/
-    resize:none;
-}
-
-#share h2 {
-    color: #456f9a;
-    margin: 0;
-}
-
-#share h4 {
-    color: #456f9a;
-    margin: 15px 0 10px 0;
 }
 
 

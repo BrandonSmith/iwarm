@@ -1,0 +1,99 @@
+/* horizontal styles */
+.horizontal-widget-list .ui-btn {
+    font-size: 0.7em;
+}
+.horizontal-widget-list .ui-icon {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    left: 5px;
+}
+.horizontal-widget-list .air-cond-horizontal .ui-icon {
+    left: 7px;
+    width: 26px;
+}
+.horizontal-widget-list .ui-btn .ui-btn-inner {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 8px;
+    text-align: left;
+}
+
+.horizontal-widget-list .air-cond-horizontal.ui-btn .ui-btn-inner {
+    padding-left: 40px;
+}
+
+.listsidebyside .delete-section {
+    position: absolute;
+    top: -18px;
+    left: -15px;
+}
+
+.ui-grid-b.sizer {
+    overflow: visible;
+}
+
+.big-number {
+    margin: -5px 0;
+}
+
+.slider-container {
+    margin-top: -8px;
+}
+
+/* columns when not selected */
+.listsidebyside .ui-grid-b.sizer > .ui-block-a {
+    width: 100%;
+}
+.listsidebyside .ui-grid-b.sizer > .ui-block-b.hidden {
+    width: 0;
+}
+.listsidebyside .ui-grid-b.sizer > .ui-block-c.hidden {
+    width: 0;
+}
+
+/* columns when selected */
+.listsidebyside .ui-grid-b.sizer > .ui-block-a.selected {
+    width: 25%;
+}
+.listsidebyside .ui-grid-b.sizer > .ui-block-b {
+    width: 65%;
+}
+.listsidebyside .ui-grid-b.sizer > .ui-block-c {
+    width: 10%;
+}
+
+.ui-controlgroup {
+    margin: 5px 0 15px 0;
+}
+
+/* custom icons */
+.ui-icon-wycd-can {
+    background: url(../images/icons/can.png) no-repeat rgba(0,0,0,0) !important;
+}
+.ui-icon-wycd-glassbottle {
+    background: url(../images/icons/glass_bottle.png) no-repeat rgba(0,0,0,0) !important;
+}
+.ui-icon-wycd-plasticbottle {
+    background: url(../images/icons/plastic_bottle.png) no-repeat rgba(0,0,0,0) !important;
+}
+.ui-icon-wycd-magazine {
+    background: url(../images/icons/magazine.png) no-repeat rgba(0,0,0,0) !important;
+}
+.ui-icon-wycd-bag {
+    background: url(../images/icons/bag.png) no-repeat rgba(0,0,0,0) !important;
+}
+
+.ui-icon-wycd-fan {
+    background: url(../images/icons/fan2.gif) no-repeat rgba(0,0,0,0) !important;
+}
+.ui-icon-wycd-hair {
+    background: url(../images/icons/hair.png) no-repeat rgba(0,0,0,0) !important;
+}
+.ui-icon-wycd-laptop {
+    background: url(../images/icons/laptop.png) no-repeat rgba(0,0,0,0) !important;
+}
+.ui-icon-wycd-lightbulb {
+    background: url(../images/icons/lightbulb.png) no-repeat rgba(0,0,0,0) !important;
+}
