@@ -9,22 +9,34 @@
 
 #recyclables .help.arrow {
     top: 25px;
-    left: 10px;
+    left: -5px;
 }
 
 #recyclables .help.title {
     top: 50px;
-    left: 0px;
+    left: -5px;
+}
+
+#share-section {
+    text-align:center;
+}
+
+h6 {
+    margin: 0;
+}
+
+#facebook {
+    margin-top: 0;
 }
 
 #appliances .help.arrow {
-    top: 25px;
-    left: 80px;
+    top: 30px;
+    left: 55px;
 }
 
 #appliances .help.title {
     top: 15px;
-    left: 0px;
+    left: -5px;
 }
 
 /*
