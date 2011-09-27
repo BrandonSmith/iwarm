@@ -1,3 +1,56 @@
+.blue-background {
+    background:#ffffff url('../images/blue-background.png') no-repeat right top;
+}
+
+#recyclables, #appliances {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#recyclables .help.arrow {
+    top: 25px;
+    left: 10px;
+}
+
+#recyclables .help.title {
+    top: 50px;
+    left: 0px;
+}
+
+#appliances .help.arrow {
+    top: 25px;
+    left: 80px;
+}
+
+#appliances .help.title {
+    top: 15px;
+    left: 0px;
+}
+
+/*
+.choose {
+    position: relative;
+}
+*/
+.help {
+    position: absolute;
+}
+
+.learn-more {
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 0 1px 0 #254F7A;
+}
+
+.learn-more a.ui-link {
+    color: #fff;
+    text-shadow: 0 1px 0 #254F7A;
+}
+
+h1.by-recycling {
+    margin: 0;
+}
+
 /* horizontal styles */
 .horizontal-widget-list .ui-btn {
     font-size: 0.7em;
@@ -30,27 +83,51 @@
     left: -15px;
 }
 
-.ui-grid-b.sizer {
+.ui-grid-a.splitter, .ui-grid-b.sizer {
     overflow: visible;
 }
 
 .big-number {
     margin: -5px 0;
+    color: #fff;
+    text-shadow: 0 1px 0 #254F7A;
+}
+
+.sentence {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #254F7A;
 }
 
 .slider-container {
     margin-top: -8px;
 }
 
+.listsidebyside .ui-grid-a.splitter > .ui-block-a {
+    width: 25%;
+}
+
+.listsidebyside .ui-grid-a.splitter > .ui-block-b {
+    width: 75%;
+}
+
+.list-section {
+    text-align: right;
+}
+
+.list-section.selected {
+    text-align: left;
+}
+
 /* columns when not selected */
 .listsidebyside .ui-grid-b.sizer > .ui-block-a {
-    width: 100%;
+    width: 90%;
 }
 .listsidebyside .ui-grid-b.sizer > .ui-block-b.hidden {
     width: 0;
 }
 .listsidebyside .ui-grid-b.sizer > .ui-block-c.hidden {
-    width: 0;
+    width: 10%;
 }
 
 /* columns when selected */
@@ -95,5 +172,5 @@
     background: url(../images/icons/laptop.png) no-repeat rgba(0,0,0,0) !important;
 }
 .ui-icon-wycd-lightbulb {
-    background: url(../images/icons/lightbulb.png) no-repeat rgba(0,0,0,0) !important;
+    background: url(../images/icons/lightbulb-cfl.png) no-repeat rgba(0,0,0,0) !important;
 }

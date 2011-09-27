@@ -155,7 +155,7 @@
                 arrow.offset({
                     top: slider_btn_coords.top + slider_btn.height() + 5,
                     left: slider_btn_coords.left + (slider_btn.width() / 2)
-                })
+                });
             } else {
                 comparison_section.addClass('hidden');
             }

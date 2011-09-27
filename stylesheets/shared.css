@@ -2,6 +2,10 @@
     display:none;
 }
 
+h1.by-recycling span {
+    display:none;
+}
+
 .sc {
     font-variant:small-caps;
     font-size: 0.75em;

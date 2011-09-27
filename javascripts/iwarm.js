@@ -16,7 +16,7 @@ window.iwarm = window.iwarm || {};
             this.appliances = {};
             this.add_appliance({short_name:"home_air_conditioner",friendly_name:'air conditioner', name:"Home air conditioner", kilowatt:1.5});
             this.add_appliance({short_name:"hair_dryer",friendly_name:'hair dryer', name:"Hair dryer", kilowatt:1.5375});
-            this.add_appliance({short_name:"60W_CFL_lightbulb",friendly_name:'60W lightbulb', name:"60 watt lightbulb", kilowatt:0.013});
+            this.add_appliance({short_name:"60W_CFL_lightbulb",friendly_name:'60W CFL lightbulb', name:"60 watt lightbulb", kilowatt:0.013});
             this.add_appliance({short_name:"laptop",friendly_name:'laptop', name:"Laptop", kilowatt:0.05});
         },
         get_appliances: function() {

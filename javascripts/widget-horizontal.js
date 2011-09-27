@@ -109,6 +109,31 @@
         var choose_header = $('.choose.slide');
         var do_hide = true;
         
+        var recyclable_help_title = $('.help.title', recyclable_section);
+        var recyclable_help_arrow = $('.help.arrow', recyclable_section);
+        var appliance_help_title = $('.help.title', appliance_section);
+        var appliance_help_arrow = $('.help.arrow', appliance_section);
+        
+        /*
+        recyclable_help_title.offset({
+            top: 50,
+            left: 0
+        });
+        recyclable_help_arrow.offset({
+            top: 25,
+            left: 10
+        });
+        appliance_help_title.offset({
+            top: 15,
+            left: 0
+        });
+        
+        appliance_help_arrow.offset({
+            top: 25,
+            left: 80
+        });
+        */
+        
         var calculate = function() {
             var q = quantity.val(),
                 rec = products.get_item(recyclable.selected),
@@ -148,7 +173,7 @@
                 }
                 calculate();
                 comparison_section.removeClass('hidden');
-                share_section.removeClass('hidden');
+                //share_section.removeClass('hidden');
                 selection_section.addClass('selected');
                 //$(".sentence").fitText(1, { minFontSize: '12px' }); //, maxFontSize: '36px'
                 //$(".big-number").fitText(0.5, { minFontSize: '32px' }); //, maxFontSize: '120px'
@@ -162,7 +187,7 @@
                 })
             } else {
                 comparison_section.addClass('hidden');
-                share_section.addClass('hidden');
+                //share_section.addClass('hidden');
                 selection_section.removeClass('selected');
             }
         };
@@ -172,14 +197,16 @@
             var li = $(this);
             if (!li.hasClass('selected')) {
                 var others = li.siblings('a'),
-                    title = recyclable_section.find('.choose'),
-                    selected_recyclable = li.attr('data-type');
+                    title = $('.help'),
+                    selected_recyclable = li.attr('data-type'),
+                    list_section = recyclable_section.find('.list-section');
                 recyclable.selected = selected_recyclable;
                 title.hide();
                 others.hide();
                 li.data('left', li.hasClass('ui-corner-left'));
                 li.data('right', li.hasClass('ui-corner-right'));
                 li.addClass('selected ui-disabled ui-corner-left ui-corner-right').removeClass('ui-btn-hover-d');
+                list_section.addClass('selected');
                 var del_section = $('<div class="delete-section"><a href="#" data-role="button" data-icon="delete" data-iconpos="notext">delete</a></div>');
                 del_section.find('a').click(function() {
                     recyclable = {};
@@ -190,9 +217,10 @@
                         li.removeClass('ui-corner-right');
                     }
                     li.removeClass('selected ui-disabled');
-                    title.show();
+                    //title.show();
                     li.show().removeClass('ui-btn-hover-d').addClass('ui-btn-up-d');
                     others.show().removeClass('ui-btn-hover-d').addClass('ui-btn-up-d');
+                    list_section.removeClass('selected');
                     del_section.remove();
                     comparison_check();
                 }).button();
@@ -208,14 +236,18 @@
             var li = $(this);
             if (!li.hasClass('selected')) {
                 var others = li.siblings('a'),
-                    title = appliance_section.find('.choose'),
-                    selected_appliance = li.attr('data-type');
+                    title = appliance_section.find('.help'),
+                    selected_appliance = li.attr('data-type'),
+                    list_section = appliance_section.find('.list-section');
                 appliance.selected = selected_appliance;
                 title.hide();
+                recyclable_help_title.hide();
+                recyclable_help_arrow.hide();
                 others.hide();
                 li.data('left', li.hasClass('ui-corner-left'));
                 li.data('right', li.hasClass('ui-corner-right'));
                 li.addClass('selected ui-disabled ui-corner-left ui-corner-right').removeClass('ui-btn-hover-d');
+                list_section.addClass('selected');
                 var del_section = $('<div class="delete-section"><a href="#" data-role="button" data-icon="delete" data-iconpos="notext">delete</a></div>');
                 del_section.find('a').click(function() {
                     appliance = {};
@@ -226,9 +258,10 @@
                         li.removeClass('ui-corner-right');
                     }
                     li.removeClass('selected ui-disabled');
-                    title.show();
+                    //title.show();
                     li.show().removeClass('ui-btn-hover-d').addClass('ui-btn-up-d');
                     others.show().removeClass('ui-btn-hover-d').addClass('ui-btn-up-d');
+                    list_section.removeClass('selected');
                     del_section.remove();
                     comparison_check();
                 }).button();
