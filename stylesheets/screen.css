@@ -1,3 +1,11 @@
+/*.widget-list .ui-li-has-icon .ui-btn-inner a.cfl {
+    font-size: 0.8em;
+}*/
+
+.ui-li .ui-btn-text a.ui-link-inherit {
+    text-overflow: clip;
+}
+
 .air-cond {
     left: 5px;
 }

@@ -1,3 +1,7 @@
+.ui-content {
+    overflow:hidden;
+}
+
 .hidden {
     display:none;
 }

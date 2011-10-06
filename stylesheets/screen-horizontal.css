@@ -1,20 +1,24 @@
+.learn-more a.ui-link {
+    font-size: 0.9em;
+}
+
 .blue-background {
     background:#ffffff url('../images/blue-background.png') no-repeat right top;
 }
 
 #recyclables, #appliances {
-    margin-right: 20px;
+    margin-right: 10px;
     margin-left: 20px;
 }
 
 #recyclables .help.arrow {
     top: 25px;
-    left: -5px;
+    left: 5px;
 }
 
 #recyclables .help.title {
     top: 50px;
-    left: -5px;
+    left: -30px;
 }
 
 #share-section {
@@ -31,12 +35,12 @@ h6 {
 
 #appliances .help.arrow {
     top: 30px;
-    left: 55px;
+    left: 35px;
 }
 
 #appliances .help.title {
     top: 15px;
-    left: -5px;
+    left: -30px;
 }
 
 /*
@@ -158,31 +162,34 @@ h1.by-recycling {
 }
 
 /* custom icons */
+.list-section .ui-icon {
+    background-color: #fff;
+}
 .ui-icon-wycd-can {
-    background: url(../images/icons/can.png) no-repeat rgba(0,0,0,0) !important;
+    background-image: url(../images/icons/can.png) !important;
 }
 .ui-icon-wycd-glassbottle {
-    background: url(../images/icons/glass_bottle.png) no-repeat rgba(0,0,0,0) !important;
+    background-image: url(../images/icons/glass_bottle.png) !important;
 }
 .ui-icon-wycd-plasticbottle {
-    background: url(../images/icons/plastic_bottle.png) no-repeat rgba(0,0,0,0) !important;
+    background-image: url(../images/icons/plastic_bottle.png) !important;
 }
 .ui-icon-wycd-magazine {
-    background: url(../images/icons/magazine.png) no-repeat rgba(0,0,0,0) !important;
+    background-image: url(../images/icons/magazine.png) !important;
 }
 .ui-icon-wycd-bag {
-    background: url(../images/icons/bag.png) no-repeat rgba(0,0,0,0) !important;
+    background-image: url(../images/icons/bag.png) !important;
 }
 
 .ui-icon-wycd-fan {
-    background: url(../images/icons/fan2.gif) no-repeat rgba(0,0,0,0) !important;
+    background-image: url(../images/icons/fan2.gif) !important;
 }
 .ui-icon-wycd-hair {
-    background: url(../images/icons/hair.png) no-repeat rgba(0,0,0,0) !important;
+    background-image: url(../images/icons/hair.png) !important;
 }
 .ui-icon-wycd-laptop {
-    background: url(../images/icons/laptop.png) no-repeat rgba(0,0,0,0) !important;
+    background-image: url(../images/icons/laptop.png) !important;
 }
 .ui-icon-wycd-lightbulb {
-    background: url(../images/icons/lightbulb-cfl.png) no-repeat rgba(0,0,0,0) !important;
+    background-image: url(../images/icons/lightbulb-cfl.png) !important;
 }
