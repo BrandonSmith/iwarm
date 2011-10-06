@@ -1,3 +1,19 @@
+.ie7 .ui-btn-up-b .ui-icon {
+    background-color: #2567AB;
+}
+
+.ie7 .ui-btn-hover-b .ui-icon {
+    background-color: #4b88b6;
+}
+
+.ie7 .ui-btn-up-c .ui-icon {
+    background-color: #EEE;
+}
+
+.ie7 .ui-btn-hover-c .ui-icon {
+    background-color: #dadada;
+}
+
 .ui-content {
     overflow:hidden;
 }
