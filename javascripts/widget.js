@@ -15,7 +15,7 @@
         no_vowel,
         vowel;
         
-    var share_template = "By recycling $quantity$ $rec_name$, I saved enough energy to power $app_name$ for $hours$ hours.";
+    var share_template = "By recycling $quantity$ $rec_name$, I saved enough energy to power $app_name$ for $hours$ hours. Calculate here:";
     var empty_template = "Calculate your energy savings here: ";
     
     var get_share_text = function() {
@@ -87,7 +87,7 @@
         var twitter = $('#twitter'),
             facebook = $('#facebook');
         
-        twitter.attr('href', 'https://twitter.com/share?url=http://1.usa.gov/mS5mrg&text='+encodeURIComponent(get_share_text())+' Calculate here:')
+        twitter.attr('href', 'https://twitter.com/share?url=http://1.usa.gov/mS5mrg&text='+encodeURIComponent(get_share_text()));
         facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&display=popup&link=http://16cards.com&picture=http://www.epa.gov/epafiles/images/logo_epaseal.gif&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epastaging.michaeldbaker.com/orcr/widget.html&description=We can have an additional text area here&caption='+encodeURIComponent(get_share_text()));
     });
     

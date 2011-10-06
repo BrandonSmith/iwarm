@@ -1,3 +1,7 @@
+.ie7 .list-section .ui-icon {
+    background-color: white;
+}
+
 .learn-more a.ui-link {
     font-size: 0.9em;
 }
@@ -163,7 +167,7 @@ h1.by-recycling {
 
 /* custom icons */
 .list-section .ui-icon {
-    background-color: #fff;
+    background-color: rgba(0,0,0,0);
 }
 .ui-icon-wycd-can {
     background-image: url(../images/icons/can.png) !important;

@@ -1,7 +1,23 @@
-/*.widget-list .ui-li-has-icon .ui-btn-inner a.cfl {
-    font-size: 0.8em;
-}*/
+.ie7 .choose .arrow {
+    display:none;
+}
 
+.ie7 #comparison .ui-grid-b {
+    overflow: visible;
+}
+
+.ie7 .comparison-container {
+    margin-top: 0;
+}
+
+#share h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+#share h4 {
+    margin: 20px 0 10px 0;
+    font-size: 14px;
+}
 .ui-li .ui-btn-text a.ui-link-inherit {
     text-overflow: clip;
 }
