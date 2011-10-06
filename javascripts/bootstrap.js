@@ -1,36 +1,36 @@
 var BrowserDetect = {
-	init: function () {
-		this.browser = this.searchString(this.dataBrowser) || 'default';
-		this.version = this.searchVersion(navigator.userAgent)
-			|| this.searchVersion(navigator.appVersion)
-			|| 'default';
-	},
-	searchString: function (data) {
-		for (var i=0;i<data.length;i++)	{
-			var dataString = data[i].string;
-			var dataProp = data[i].prop;
-			this.versionSearchString = data[i].versionSearch || data[i].identity;
-			if (dataString) {
-				if (dataString.indexOf(data[i].subString) != -1)
-					return data[i].identity;
-			}
-			else if (dataProp)
-				return data[i].identity;
-		}
-	},
-	searchVersion: function (dataString) {
-		var index = dataString.indexOf(this.versionSearchString);
-		if (index == -1) return;
-		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
-	},
-	dataBrowser: [
-		{
-			string: navigator.userAgent,
-			subString: "MSIE",
-			identity: "MSIE",
-			versionSearch: "MSIE"
-		}
-	]
+    init: function () {
+        this.browser = this.searchString(this.dataBrowser) || 'default';
+        this.version = this.searchVersion(navigator.userAgent)
+            || this.searchVersion(navigator.appVersion)
+            || 'default';
+    },
+    searchString: function (data) {
+        for (var i=0;i<data.length;i++) {
+            var dataString = data[i].string;
+            var dataProp = data[i].prop;
+            this.versionSearchString = data[i].versionSearch || data[i].identity;
+            if (dataString) {
+                if (dataString.indexOf(data[i].subString) != -1)
+                    return data[i].identity;
+            }
+            else if (dataProp)
+                return data[i].identity;
+        }
+    },
+    searchVersion: function (dataString) {
+        var index = dataString.indexOf(this.versionSearchString);
+        if (index == -1) return;
+        return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+    },
+    dataBrowser: [
+        {
+            string: navigator.userAgent,
+            subString: "MSIE",
+            identity: "MSIE",
+            versionSearch: "MSIE"
+        }
+    ]
 };
 BrowserDetect.init();
 
@@ -45,8 +45,8 @@ window.iwarm = window.iwarm || {};
     w.Widget.prototype = {
         tall: {
             url: 'layout_2.html',
-            defaultdefault: {width:'270px',height:'373px'},
-            MSIE7: {width:'270px',height:'413px'},
+            defaultdefault: {width:'270px',height:'369px'},
+            MSIE7: {width:'270px',height:'405px'},
             MSIE8: {width:'270px',height:'400px'},
             MSIE9: {width:'270px',height:'373px'}
         },

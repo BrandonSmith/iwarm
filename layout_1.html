@@ -44,12 +44,31 @@
                 <div>Make more calculations with</div>
                 <div><a href="http://www.epa.gov/iwarm" target="_blank">EPA's WARM Model Calculator</a></div>
                 <div style="margin-top: 5px">
-                    <a href="#" title="Embed this widget on your site">Embed on your site</a>
+                    <a id="embed_action" href="#" title="Embed this widget on your site">Embed on your site</a>
                 </div>
             </div>
         </div>
         <div class="ui-block-b">
             <div class="ui-grid-b sizer">
+                <div id="embed" class="ui-block-a hidden">
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a">
+                            <div class="ui-header">
+                                <a id="back" href="#" data-role="button" data-theme="c" data-icon="arrow-l">Back</a>
+                            </div>
+                        </div>
+                        <div class="ui-block-b">
+                            <div>
+            <h3>Embed Code<span> - Copy the code below and paste it into your blog or web page:</span></h3>
+<textarea id="copy-code" onclick="this.focus(); this.select()"><script type="text/javascript" src="http://epastaging.michaeldbaker.com/orcr/javascripts/bootstrap.js"></script>
+<script type="text/javascript">
+if(iwarm && iwarm.Widget) (new iwarm.Widget()).init('wide');
+</script>
+<noscript>Get the widget!</noscript></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="selection" class="ui-block-a">
                     <div id="recyclables" class="block">
                         <div class="list-section horizontal-widget-list" data-role="controlgroup" data-type="horizontal">

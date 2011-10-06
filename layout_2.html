@@ -104,6 +104,7 @@
         <div data-role="navbar">
             <ul>
                 <li><a href="#share">Share your results</a></li>
+                <li><a href="#embed">Embed</a></li>
                 <li><a href="http://www.epa.gov/iwarm" target="_blank">Learn more</a></li>
             </ul>
         </div>
@@ -134,33 +135,40 @@
         <h3>Share your RECYCLING impact</h3>
         <a id="twitter" href="#" data-role="button" data-theme="c" data-icon="iwarm-twitter" target="_blank">Twitter</a>
         <a id="facebook" href="#" data-role="button" data-theme="b" data-icon="iwarm-facebook" target="_blank">Facebook</a>
-        <h4>Embed on your site:</h4>
-        <textarea id="copy-code" onclick="this.focus(); this.select()">
-JAVASCRIPT WIDGET CODE AVAILABLE FOR COPY HERE
-        </textarea>
     </div>
     <div data-role="footer" data-theme="b" data-id="footer" data-position="fixed">
         <div data-role="navbar">
             <ul>
+                <li><a href="#embed">Embed</a></li>
                 <li><a href="http://www.epa.gov/iwarm" target="_blank">Learn more</a></li>
             </ul>
         </div>
     </div>
-    <!--
-    <div data-role="footer" data-theme="b" class="ui-bar">
-        <a href="#" data-icon="plus">Learn more</a>
+</div>
+
+<div data-role="page" id="embed" data-add-back-btn="true" data-theme="d">
+    <div data-role="header" data-theme="b">
+        <h1>Embed</h1>
     </div>
-    -->
-    <!--
-    <div data-role="footer" data-theme="b">
+    <div data-role="content">
+        <h3>Embed Code</h3>
+        <p>Copy the code below and paste it into your blog or web page:</p>
+        <textarea id="copy-code" onclick="this.focus(); this.select()"><script type="text/javascript" src="http://epastaging.michaeldbaker.com/orcr/javascripts/bootstrap.js"></script>
+<script type="text/javascript">
+if(iwarm && iwarm.Widget) (new iwarm.Widget()).init('tall');
+</script>
+<noscript>Get the widget!</noscript></textarea>
+    </div>
+    <div data-role="footer" data-theme="b" data-id="footer" data-position="fixed">
         <div data-role="navbar">
             <ul>
-                <li><a href="#" data-icon="plus" data-iconpos="top">Learn More</a></li>
+                <li><a href="#share">Share</a></li>
+                <li><a href="http://www.epa.gov/iwarm" target="_blank">Learn more</a></li>
             </ul>
         </div>
     </div>
-    -->
 </div>
+
 
 </body>
 </html> 

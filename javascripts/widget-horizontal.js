@@ -17,7 +17,10 @@
         no_vowel,
         vowel,
         twitter,
-        facebook;
+        facebook,
+        embed,
+        embed_action,
+        back;
         
     var share_template = "By recycling $quantity$ $rec_name$, I saved enough energy to power $app_name$ for $hours$ hours. Calculate here:";
     var empty_template = "Calculate your energy savings here: ";
@@ -104,7 +107,29 @@
         no_vowel = $('.no-vowel', comparison_section);
         vowel = $('.vowel', comparison_section);
         twitter = $('#twitter');
-        facebook = $('#facebook');
+        facebook = $('#facebook'),
+        embed = $('#embed'),
+        embed_action = $('#embed_action'),
+        back = $('#back');
+
+        embed_action.click(function() {
+            var mode = embed.data('mode');
+            if (!mode) {
+                var is_select = comparison_section.hasClass('hidden');
+                comparison_section.addClass('hidden');
+                selection_section.addClass('hidden');
+                embed.removeClass('hidden').data('mode', is_select ? 'selection' : 'comparison');
+            }
+
+        });
+        back.click(function() {
+            var mode = embed.data('mode');
+            embed.addClass('hidden').removeData('mode');
+            selection_section.removeClass('hidden');
+            if (mode === 'comparison') {
+                comparison_section.removeClass('hidden');
+            }
+        });
         
         var choose_header = $('.choose.slide');
         var do_hide = true;

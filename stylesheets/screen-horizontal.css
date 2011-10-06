@@ -29,6 +29,38 @@
     text-align:center;
 }
 
+#embed > div{
+ margin-left: 15px;
+}
+
+#embed h3 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+#embed h3 span {
+    font-size: 10px;
+}
+#embed .ui-block-a {
+    width: 15%;
+}
+
+#embed .ui-block-b {
+    width: 85%;
+}
+
+#embed .ui-block-b > div {
+    margin: 0 10px;
+}
+
+#copy-code {
+    font-size: 10px;
+    resize: none;
+    width: 90%;
+    height: 70px;
+}
+
 h6 {
     margin: 0;
 }
