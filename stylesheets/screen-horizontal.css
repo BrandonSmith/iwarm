@@ -17,12 +17,12 @@
 
 #recyclables .help.arrow {
     top: 25px;
-    left: 5px;
+    left: -25px;
 }
 
 #recyclables .help.title {
     top: 50px;
-    left: -30px;
+    left: -60px;
 }
 
 #share-section {
@@ -71,12 +71,12 @@ h6 {
 
 #appliances .help.arrow {
     top: 30px;
-    left: 35px;
+    left: 0px;
 }
 
 #appliances .help.title {
     top: 15px;
-    left: -30px;
+    left: -60px;
 }
 
 /*
@@ -156,11 +156,11 @@ h1.by-recycling {
 }
 
 .listsidebyside .ui-grid-a.splitter > .ui-block-a {
-    width: 25%;
+    width: 30%;
 }
 
 .listsidebyside .ui-grid-a.splitter > .ui-block-b {
-    width: 75%;
+    width: 70%;
 }
 
 .list-section {

@@ -139,26 +139,12 @@
         var appliance_help_title = $('.help.title', appliance_section);
         var appliance_help_arrow = $('.help.arrow', appliance_section);
         
-        /*
-        recyclable_help_title.offset({
-            top: 50,
-            left: 0
-        });
-        recyclable_help_arrow.offset({
-            top: 25,
-            left: 10
-        });
-        appliance_help_title.offset({
-            top: 15,
-            left: 0
-        });
-        
-        appliance_help_arrow.offset({
-            top: 25,
-            left: 80
-        });
-        */
-        
+        var do_share_links = function() {
+            twitter.attr('href', 'https://twitter.com/share?url=http://1.usa.gov/mS5mrg&text='+encodeURIComponent(get_share_text()));
+            facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&display=popup&link=http://16cards.com&picture=http://www.epa.gov/epafiles/images/logo_epaseal.gif&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epastaging.michaeldbaker.com/orcr/widget.html&description=We can have an additional text area here&caption='+encodeURIComponent(get_share_text()));
+        };
+        do_share_links();
+
         var calculate = function() {
             var q = quantity.val(),
                 rec = products.get_item(recyclable.selected),
@@ -171,10 +157,9 @@
             recyclable_name.text(rec_name);
             appliance_quantity.text(hours.toFixed(1));
             appliance_name.text(app_name);
-            twitter.attr('href', 'https://twitter.com/share?url=http://1.usa.gov/mS5mrg&text='+encodeURIComponent(get_share_text()));
-            facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&display=popup&link=http://16cards.com&picture=http://www.epa.gov/epafiles/images/logo_epaseal.gif&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epastaging.michaeldbaker.com/orcr/widget.html&description=We can have an additional text area here&caption='+encodeURIComponent(get_share_text()));
+            do_share_links();
         };
-        
+
         var hide_and_calculate = function() {
             calculate();
             if (do_hide) {
@@ -186,6 +171,10 @@
         }
 
         quantity.slider({change: hide_and_calculate});
+
+        var go_default = function() {
+            
+        };
 
         var comparison_check = function() {
             if (recyclable.selected && appliance.selected) {
