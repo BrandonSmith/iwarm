@@ -104,32 +104,17 @@
     <div data-role="footer" data-theme="b" data-id="footer" data-position="fixed">
         <div data-role="navbar">
             <ul>
-                <li><a href="#share">Share your results</a></li>
-                <li><a href="#embed">Embed</a></li>
+                <li><a class="share-link" href="#">Share your results</a></li>
+                <li><a class="embed-link" href="#">Embed</a></li>
                 <li><a href="http://www.epa.gov/iwarm" target="_blank">Learn more</a></li>
             </ul>
         </div>
     </div>
-    <!--
-    <div data-role="footer" data-theme="b" class="ui-bar">
-        <a href="#share" data-icon="plus">Share your recycling</a>
-        <a href="#" data-icon="plus">Learn more</a>
-    </div>
-    -->
-    <!--
-    <div data-role="footer" data-theme="b">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#share" data-icon="plus">Share</a></li>
-                <li><a href="#" data-icon="plus">Learn More</a></li>
-            </ul>
-        </div>
-    </div>
-    -->
 </div>
 
-<div data-role="page" id="share" data-add-back-btn="true" data-theme="d">
+<div data-role="page" id="share" data-theme="d">
     <div data-role="header" data-theme="b">
+        <a id="share-back" href="#" data-role="button" data-icon="arrow-l">Back</a>
         <h1>Share</h1>
     </div>
     <div data-role="content">
@@ -140,15 +125,16 @@
     <div data-role="footer" data-theme="b" data-id="footer" data-position="fixed">
         <div data-role="navbar">
             <ul>
-                <li><a href="#embed">Embed</a></li>
+                <li><a class="embed-link" href="#">Embed</a></li>
                 <li><a href="http://www.epa.gov/iwarm" target="_blank">Learn more</a></li>
             </ul>
         </div>
     </div>
 </div>
 
-<div data-role="page" id="embed" data-add-back-btn="true" data-theme="d">
+<div data-role="page" id="embed" data-theme="d">
     <div data-role="header" data-theme="b">
+        <a id="embed-back" href="#" data-role="button" data-icon="arrow-l">Back</a>
         <h1>Embed</h1>
     </div>
     <div data-role="content">
@@ -163,7 +149,7 @@ if(iwarm && iwarm.Widget) (new iwarm.Widget()).init('tall');
     <div data-role="footer" data-theme="b" data-id="footer" data-position="fixed">
         <div data-role="navbar">
             <ul>
-                <li><a href="#share">Share</a></li>
+                <li><a class="share-link" href="#">Share</a></li>
                 <li><a href="http://www.epa.gov/iwarm" target="_blank">Learn more</a></li>
             </ul>
         </div>

@@ -13,7 +13,14 @@
         appliance_name,
         quantity,
         no_vowel,
-        vowel;
+        vowel,
+        widget_home,
+        embed,
+        share,
+        share_back,
+        share_link,
+        embed_back,
+        embed_link;
         
     var share_template = "By recycling $quantity$ $rec_name$, I saved enough energy to power $app_name$ for $hours$ hours. Calculate here:";
     var empty_template = "Calculate your energy savings here: ";
@@ -105,7 +112,36 @@
         quantity = $('#quantity');
         no_vowel = $('.no-vowel', comparison_section);
         vowel = $('.vowel', comparison_section);
-        
+        widget_home = $('#widget-home');
+        embed = $('#embed');
+        share = $('#share');
+        share_back = $('#share-back');
+        share_link = $('.share-link');
+        embed_back = $('#embed-back');
+        embed_link = $('.embed-link');
+
+        var go_home = function() {
+            $.mobile.changePage(widget_home, {
+                changeHash: false,
+                reverse: true
+            });
+        };
+
+        share_back.click(go_home);
+        embed_back.click(go_home);
+
+        share_link.click(function() {
+            $.mobile.changePage(share, {
+                changeHash: false,
+            });
+        });
+
+        embed_link.click(function() {
+            $.mobile.changePage(embed, {
+                changeHash: false
+            });
+        });
+
         var choose_header = $('.choose.slide');
         var do_hide = true;
         
