@@ -141,7 +141,7 @@
         
         var do_share_links = function() {
             twitter.attr('href', 'https://twitter.com/share?url=http://1.usa.gov/mS5mrg&text='+encodeURIComponent(get_share_text()));
-            facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&display=popup&link=http://16cards.com&picture=http://www.epa.gov/epafiles/images/logo_epaseal.gif&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epastaging.michaeldbaker.com/orcr/widget.html&description=We can have an additional text area here&caption='+encodeURIComponent(get_share_text()));
+            facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&display=popup&link=http://16cards.com&picture=http://epastaging.michaeldbaker.com/orcr/images/epa_seal.gif&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epastaging.michaeldbaker.com/orcr/widget.html&description=We can have an additional text area here&caption='+encodeURIComponent(get_share_text()));
         };
         do_share_links();
 

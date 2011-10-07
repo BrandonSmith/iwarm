@@ -1,6 +1,19 @@
-.ie7 .list-section .ui-icon {
+.ie7 .list-section .ui-icon,
+.ie8 .list-section .ui-icon {
     background-color: white;
 }
+
+.ie7 .ui-btn-hover-d .ui-icon,
+.ie8 .ui-btn-hover-d .ui-icon {
+    background-color: #eeeeee;
+}
+
+.ie #embed h3,
+.ie .big-number,
+.ie .sentence {
+    color: #333 !important;
+}
+
 
 .learn-more a.ui-link {
     font-size: 0.9em;
@@ -22,7 +35,7 @@
 
 #recyclables .help.title {
     top: 50px;
-    left: -60px;
+    left: -70px;
 }
 
 #share-section {
@@ -37,28 +50,30 @@
     margin: 0 0 5px 0;
     font-size: 14px;
     color: #fff;
+    text-shadow: 0 1px 0 #254F7A;¬
 }
 
 #embed h3 span {
     font-size: 10px;
+    display: block;
 }
 #embed .ui-block-a {
     width: 15%;
 }
 
 #embed .ui-block-b {
-    width: 85%;
+    width: 80%;
 }
 
 #embed .ui-block-b > div {
-    margin: 0 10px;
+    margin: 0 0 0 10px;
 }
 
 #copy-code {
     font-size: 10px;
     resize: none;
     width: 90%;
-    height: 70px;
+    height: 50px;
 }
 
 h6 {
@@ -76,7 +91,7 @@ h6 {
 
 #appliances .help.title {
     top: 15px;
-    left: -60px;
+    left: -70px;
 }
 
 /*
