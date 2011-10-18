@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="em". <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WYCD EPA</title>
+    <link rel="stylesheet" href="stylesheets/jquery.mobile-1.0rc1.css" />
+    <link rel="stylesheet" href="stylesheets/shared.css" />
+    <link rel="stylesheet" href="stylesheets/wide.css" />
+    <script src="javascripts/jquery-1.6.2.min.js"></script>
+    <script src="javascripts/iwarm.js"></script>
+    <script src="javascripts/wide.js"></script>
+    <script src="javascripts/jquery.mobile-1.0rc1.js"></script>
+</head>
+<body>
+<div data-role="page" id="widget-home" class="listsidebyside blue-background" data-theme="d">
+    <div data-role="content">
+        <div class="ui-grid-a splitter">
+        <div class="ui-block-a">
+            <h1 class="by-recycling">
+                <span>Save energy by recycling</span>
+                <img src="images/icons/header-2.png" alt="Save energy by recycling" />
+            </h1>
+            <div class="learn-more">
+                <div>Make more calculations with</div>
+                <div><a href="http://www.epa.gov/iwarm" target="_blank">EPA's WARM Model Calculator</a></div>
+                <div style="margin-top: 5px">
+                    <a id="embed_action" href="#" title="Embed this widget on your site">Embed on your site</a>
+                </div>
+            </div>
+        </div>
+        <div class="ui-block-b">
+            <div class="ui-grid-b sizer">
+                <div id="embed" class="ui-block-a hidden">
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a">
+                            <div class="ui-header">
+                                <a id="back" href="#" data-role="button" data-theme="c" data-icon="arrow-l">Back</a>
+                            </div>
+                        </div>
+                        <div class="ui-block-b">
+                            <div>
+            <h3>Embed Code<span>Copy the code below and paste it into your blog or web page:</span></h3>
+<textarea id="copy-code" onclick="this.focus(); this.select()"><script type="text/javascript" src="http://epastaging.michaeldbaker.com/orcr/javascripts/bootstrap.js"></script>
+<script type="text/javascript">
+if(iwarm && iwarm.Widget) (new iwarm.Widget()).init('wide');
+</script>
+<noscript>Get the widget!</noscript></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="selection" class="ui-block-a">
+                    <div id="recyclables" class="block">
+                        <div class="list-section horizontal-widget-list" data-role="controlgroup" data-type="horizontal">
+                            <a href="#" data-type="aluminum_can" data-role="button" data-icon="wycd-can">Aluminum<br>Can</a>
+                            <a href="#" data-type="glass_bottle" data-role="button" data-icon="wycd-glassbottle">Glass<br>Bottle</a>
+                            <a href="#" data-type="plastic_bottle" data-role="button" data-icon="wycd-plasticbottle">Plastic<br>Bottle</a>
+                            <a href="#" data-type="magazine" data-role="button" data-icon="wycd-magazine">Weekly<br>Magazine</a>
+                            <a href="#" data-type="plastic_bag" data-role="button" data-icon="wycd-bag">Plastic<br>Grocery Bag</a>
+                        </div>
+                        <span class="help arrow"><img src="images/icons/arrow-right-top.png" alt="choose a recyclable" /></span>
+                        <span class="help title"><img src="images/icons/recyclable-header-1.png" alt="choose a recyclable" /></span>
+                    </div>
+                    <div id="appliances" class="block">
+                        <div class="list-section horizontal-widget-list" data-role="controlgroup" data-type="horizontal">
+                            <a href="#" data-type="home_air_conditioner" data-role="button" data-icon="wycd-fan" class="air-cond-horizontal">Room Air<br>Conditioner</a>
+                            <a href="#" data-type="hair_dryer" data-role="button" data-icon="wycd-hair">Hair<br>Dryer</a>
+                            <a href="#" data-type="laptop" data-role="button" data-icon="wycd-laptop">Laptop<br>Computer</a>
+                            <a href="#" data-type="60W_CFL_lightbulb" data-role="button" data-icon="wycd-lightbulb">60W Equivalent<br>CFL Bulb</a>
+                        </div>
+                        <span class="help arrow"><img src="images/icons/arrow-right-bottom.png" alt="power an appliance" /></span>
+                        <span class="help title"><img src="images/icons/appliance-header-1.png" alt="power an appliance" /></span>
+                    </div>
+                </div>
+                <div id="comparison" class="ui-block-b comparison-container hidden">
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a">
+                            <div class="comparison products">
+                                <div>
+                                    <div class="sentence">recycling</div>
+                                    <div id="recyclable-quantity" class="big-number"></div>
+                                    <div id="recyclable-name" class="sentence"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-block-b big-arrow" align="center">
+                            <!--<img src="images/icons/arrow.png" />-->
+                        </div>
+                        <div class="ui-block-c">
+                            <div class="comparison appliances">
+                                <div>
+                                    <div class="sentence">powers</div>
+                                    <div id="appliance-quantity" class="big-number"></div>
+                                    <div class="sentence">hours of <span class="no-vowel">a</span><span class="vowel hidden">an</span></div>
+                                    <div id="appliance-name" class="sentence"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-container" align="center">
+                        <input type="range" name="quantity" id="quantity" value="10" min="1" max="50" />
+                    </div>
+                </div>
+                <div id="share-section" class="ui-block-c">
+                    <h6>Share results</h6>
+                    <div align="center">
+                    <a id="twitter" href="#" data-role="button" data-theme="c" data-icon="iwarm-twitter" data-iconpos="notext" target="_blank">Twitter</a>
+                    <a id="facebook" href="#" data-role="button" data-theme="b" data-icon="iwarm-facebook" data-iconpos="notext" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

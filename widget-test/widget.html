@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>WYCD Widget</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+    <script src="javascripts/jquery-1.6.2.min.js"></script>
+</head>
+<body>
+
+    <div class="container"> 
+        <div class="sixteen columns">
+            <h1 class="remove-bottom" style="margin-top: 40px">WhatYouCanDo Widget </h1>
+            <h5>Version 0.0.1</h5>
+            <hr />
+        </div>
+        <div class="one-third column">
+            <h3>About the widget?</h3>    
+            <p>This widget is  a simplified/condensed version of the <a href="http://www.epa.gov/wastes/conserve/tools/iwarm/">iWARM</a> tool.</p>
+        </div>
+        <div class="one-third column">
+            <h3>Widget Preview</h3>
+            <script type="text/javascript" src="javascripts/bootstrap.js"></script>
+            <script type="text/javascript">
+                if(iwarm && iwarm.Widget) (new iwarm.Widget()).init('tall');
+            </script>
+            <noscript>Get the widget!</noscript>
+        </div>
+        <div class="one-third column">
+            <h3>Docs &amp; Support</h3> 
+            <p>layout options</p>
+            <ul>
+            <li><a href="fluid_layout.pdf">Fluid Layout</a> (PDF)</li>
+            <li><a href="linear_layout.pdf">Linear Layout</a> (PDF)</li>
+            <li><a href="sentence_layout.pdf">Sentence Layout</a> (PDF)</li>
+            </ul>
+        </div>
+        <div class="sixteen columns">
+            <!--
+            <iframe id="widget" src="layout_1.html" width="800" height="130"
+                scrolling="no" seamless="seamless" frameBorder="0" style="border: 1px solid #000;"></iframe>
+            -->
+            <script type="text/javascript" src="javascripts/bootstrap.js"></script>
+            <script type="text/javascript">
+                if(iwarm && iwarm.Widget) (new iwarm.Widget()).init('wide');
+            </script>
+            <noscript>Get the widget!</noscript>
+        </div>
+    </div>
+    
+    <!-- JS -->
+
+</body>
+</html>
