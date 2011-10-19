@@ -1,0 +1,13 @@
+INSTALL THE EMBED CODE
+
+<script type="text/javascript">
+    var wycd = {
+        protocol: (("https:" == document.location.protocol) ? "https://" : "http://"),
+        host: "localhost", // change to the deployed host
+        path: "/iwarm/widget/" // change to location where widget folder is dployed
+    };
+    document.write(unescape("%3Cscript src='" + wycd.protocol + wycd.host + wycd.path + "javascripts/bootstrap.js" + "' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {(new wycd.Widget()).init('wide');} catch (err) {}
+</script>
