@@ -38,13 +38,14 @@
                 var wycd = {
                     protocol: (("https:" == document.location.protocol) ? "https://" : "http://"),
                     host: 'localhost',
-                    path: '/iwarm/widget/',
-                    debug: true
+                    path: '/iwarm/widget/'
                 };
                 document.write(unescape("%3Cscript src='" + wycd.protocol + wycd.host + wycd.path + "javascripts/bootstrap.js" + "' type='text/javascript'%3E%3C/script%3E"));
             </script>
             <script type="text/javascript">
-                if(wycd.Widget) (new wycd.Widget()).init('tall');
+                try {
+                    (new wycd.Widget()).init('tall');
+                } catch (err) {}
             </script>
             <noscript>Get the widget!</noscript>
         </div>

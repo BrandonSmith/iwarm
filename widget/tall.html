@@ -11,6 +11,12 @@
     <title>WYCD EPA</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script type="text/javascript">
+            // if jQuery does not exist, CDN above has failed, use local as failsafe
+            if (typeof jQuery === "undefined") {
+                document.write(unescape("%3Cscript src='javascripts/jquery-1.6.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+    </script>
+    <script type="text/javascript">
         window.wycd = window.wycd || {};
         (function(w) {
             function out(paths, type) {
@@ -48,11 +54,6 @@
                 return params;
             }
             w.options = parseOptions(window.location.search);
-
-            // if jQuery does not exist, CDN above has failed, use local as failsafe
-            if (typeof jQuery === "undefined") {
-                document.write(unescape("%3Cscript src='javascripts/jquery-1.6.2.min.js' type='text/javascript'%3E%3C/script%3E"));
-            }
 
             // merge defaults + passed in options
             w.options = $.extend({
@@ -180,9 +181,12 @@
     <div data-role="content">
         <h3>Embed Code</h3>
         <p>Copy the code below and paste it into your blog or web page:</p>
-        <textarea id="copy-code" onclick="this.focus(); this.select()"><script type="text/javascript" src="http://epastaging.michaeldbaker.com/orcr/javascripts/bootstrap.js"></script>
+        <textarea id="copy-code" onclick="this.focus(); this.select()"><script type="text/javascript">
+    var wycd = {protocol: (("https:" == document.location.protocol) ? "https://" : "http://"),host: 'localhost', path: '/iwarm/widget/'};
+    document.write(unescape("%3Cscript src='" + wycd.protocol + wycd.host + wycd.path + "javascripts/bootstrap.js" + "' type='text/javascript'%3E%3C/script%3E"));
+</script>
 <script type="text/javascript">
-if(wycd && wycd.Widget) (new wycd.Widget()).init('tall');
+    try {(new wycd.Widget()).init('tall');} catch (err) {}
 </script>
 <noscript>Get the widget!</noscript></textarea>
     </div>

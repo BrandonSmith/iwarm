@@ -3,7 +3,7 @@
     var recyclable = {},
         appliance = {};
 
-        // these hold references to jQuery DOM elements
+    // these hold references to jQuery DOM elements
     // initialized below
     var recyclable_section,
         appliance_section,
