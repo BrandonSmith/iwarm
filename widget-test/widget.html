@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="stylesheets/base.css">
     <link rel="stylesheet" href="stylesheets/skeleton.css">
     <link rel="stylesheet" href="stylesheets/layout.css">
-    <script src="javascripts/jquery-1.6.2.min.js"></script>
 </head>
 <body>
 
@@ -35,9 +34,17 @@
         </div>
         <div class="one-third column">
             <h3>Widget Preview</h3>
-            <script type="text/javascript" src="javascripts/bootstrap.js"></script>
             <script type="text/javascript">
-                if(iwarm && iwarm.Widget) (new iwarm.Widget()).init('tall');
+                var wycd = {
+                    protocol: (("https:" == document.location.protocol) ? "https://" : "http://"),
+                    host: 'localhost',
+                    path: '/iwarm/widget/',
+                    debug: true
+                };
+                document.write(unescape("%3Cscript src='" + wycd.protocol + wycd.host + wycd.path + "javascripts/bootstrap.js" + "' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+                if(wycd.Widget) (new wycd.Widget()).init('tall');
             </script>
             <noscript>Get the widget!</noscript>
         </div>
@@ -51,13 +58,8 @@
             </ul>
         </div>
         <div class="sixteen columns">
-            <!--
-            <iframe id="widget" src="layout_1.html" width="800" height="130"
-                scrolling="no" seamless="seamless" frameBorder="0" style="border: 1px solid #000;"></iframe>
-            -->
-            <script type="text/javascript" src="javascripts/bootstrap.js"></script>
             <script type="text/javascript">
-                if(iwarm && iwarm.Widget) (new iwarm.Widget()).init('wide');
+                if(wycd.Widget) (new wycd.Widget()).init('wide');
             </script>
             <noscript>Get the widget!</noscript>
         </div>

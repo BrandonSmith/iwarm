@@ -9,18 +9,69 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WYCD EPA</title>
-    <link rel="stylesheet" href="stylesheets/jquery.mobile-1.0rc1.css" />
-    <link rel="stylesheet" href="stylesheets/shared.css" />
-    <link rel="stylesheet" href="stylesheets/tall.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script type="text/javascript">
-        if (typeof jQuery === "undefined") {
-            document.write(unescape("%3Cscript src='javascripts/jquery-1.6.2.min.js' type='text/javascript'%3E%3C/script%3E"));
-        }
+        window.wycd = window.wycd || {};
+        (function(w) {
+            function out(paths, type) {
+                var str = '';
+                if (type === 'js') {
+                    str += "%3Cscript type='text/javascript' src='javascripts/";
+                    str += paths.join("'%3E%3C/script%3E%3Cscript type='text/javascript' src='javascripts/");
+                    str += "'%3E%3C/script%3E";
+                } else if (type === 'css') {
+                    str += "%3Clink rel='stylesheet' href='stylesheets/";
+                    str += paths.join("'/%3E%3Clink rel='stylesheet' href='stylesheets/");
+                    str += "'/%3E";
+                }
+                document.write(unescape(str));
+            }
+            function parseOptions(query) {
+                var params = {};
+                query = query.replace(/^\?/,'');
+                if (!query) return params;
+                var pairs = query.split(/[;&]/);
+                for (var i=0; i<pairs.length; i++) {
+                    var key_val = pairs[i].split('=');
+                    if (!key_val || key_val.length!=2) continue;
+                    var key = unescape(key_val[0]);
+                    var val = unescape(key_val[1]).replace(/\+/g,' ');
+                    if (key === 'debug') {
+                        if ((/^true$/i).test(val)) {
+                            val = true;
+                        } else {
+                            val = false;
+                        }
+                    }
+                    params[key] = val;
+                }
+                return params;
+            }
+            w.options = parseOptions(window.location.search);
+
+            // if jQuery does not exist, CDN above has failed, use local as failsafe
+            if (typeof jQuery === "undefined") {
+                document.write(unescape("%3Cscript src='javascripts/jquery-1.6.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+
+            // merge defaults + passed in options
+            w.options = $.extend({
+                debug: false,
+            }, w.options);
+
+            if (w.options.debug) {
+                // debug version of css
+                out(['jquery.mobile-1.0rc1.css','shared.css','tall.css'], 'css');
+                // debug version of js
+                out(['iwarm.js','tall.js','jquery.mobile-1.0rc1.js'], 'js');
+            } else {
+                // minified version of css
+                out(['styles-tall.min.css'], 'css');
+                // minified version of js
+                out(['widget-tall.min.js'], 'js');
+            }
+        }(window.wycd));
     </script>
-    <script src="javascripts/iwarm.js"></script>
-    <script src="javascripts/widget.js"></script>
-    <script src="javascripts/jquery.mobile-1.0rc1.js"></script>
 </head>
 <body>
 <div data-role="page" id="widget-home" class="listsidebyside" data-theme="d">
@@ -131,7 +182,7 @@
         <p>Copy the code below and paste it into your blog or web page:</p>
         <textarea id="copy-code" onclick="this.focus(); this.select()"><script type="text/javascript" src="http://epastaging.michaeldbaker.com/orcr/javascripts/bootstrap.js"></script>
 <script type="text/javascript">
-if(iwarm && iwarm.Widget) (new iwarm.Widget()).init('tall');
+if(wycd && wycd.Widget) (new wycd.Widget()).init('tall');
 </script>
 <noscript>Get the widget!</noscript></textarea>
     </div>
