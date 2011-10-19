@@ -1,7 +1,8 @@
-;(function($, products) {
+;(function($, w) {
     // holds users recyclable item and appliance selection
     var recyclable = {},
-        appliance = {};
+        appliance = {},
+        products = w.Products;
 
     // these hold references to jQuery DOM elements
     // initialized below
@@ -305,8 +306,10 @@
                 comparison_check();
             }
         });
+        // change the embed code dynamically
+        $('#copy-code').val(w.ShareTemplate.replace('%%TYPE%%', 'tall'));
     });
-}(jQuery, wycd.Products));
+}(jQuery, wycd));
 
 // Facebook setup
 window.fbAsyncInit = function() {

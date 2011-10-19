@@ -2,6 +2,15 @@
 window.wycd = window.wycd || {};
 
 ;(function(w) {
+
+    w.ShareTemplate = '<script type="text/javascript">' +
+                      'var wycd = {protocol: (("https:" == document.location.protocol) ? "https://" : "http://"),host: "'+w.options.host+'", path: "'+w.options.path+'"};' +
+                      'document.write(unescape("%3Cscript src=\'" + wycd.protocol + wycd.host + wycd.path + "javascripts/bootstrap.js" + "\' type=\'text/javascript\'%3E%3C/script%3E"));' +
+                       '</script>' +
+                       '<script type="text/javascript">' +
+                       'try {(new wycd.Widget()).init(\'%%TYPE%%\');} catch (err) {}' +
+                       '</script>'
+                       ;// +'<noscript>Get the widget!</noscript>';
     // Products object
     w.Products = {
         items:null,
