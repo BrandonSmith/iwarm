@@ -14,9 +14,31 @@
     color: #333 !important;
 }
 
-
 .learn-more a.ui-link {
+    color: #ffffff;
     font-size: 0.9em;
+}
+
+.learn-more a.ui-link:active {
+    color: #ffffff;
+}
+
+.learn-more a.ui-link:hover {
+    color: #ffffff;
+}
+
+.learn-more a.ui-link:visited {
+    color: #ffffff;
+}
+
+.learn-more a.ui-link:active {
+    color: #ffffff;
+}
+
+.learn-more {
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 0 1px 0 #254F7A;
 }
 
 .blue-background {
@@ -103,16 +125,7 @@ h6 {
     position: absolute;
 }
 
-.learn-more {
-    font-size: 12px;
-    color: #fff;
-    text-shadow: 0 1px 0 #254F7A;
-}
 
-.learn-more a.ui-link {
-    color: #fff;
-    text-shadow: 0 1px 0 #254F7A;
-}
 
 h1.by-recycling {
     margin: 0;
