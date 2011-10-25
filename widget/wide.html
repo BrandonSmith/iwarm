@@ -57,15 +57,13 @@
 
 
             // merge defaults + passed in options
-            w.options = $.extend({
-                debug: false,
-            }, w.options);
+            w.options = $.extend({debug: false}, w.options);
 
             if (w.options.debug) {
                 // debug version of css
-                out(['jquery.mobile-1.0rc1.css','shared.css','wide.css'], 'css');
+                out(['jquery.mobile-1.0rc2.css','shared.css','wide.css'], 'css');
                 // debug version of js
-                out(['iwarm.js','wide.js','jquery.mobile-1.0rc1.js'], 'js');
+                out(['iwarm.js','wide.js','jquery.mobile-1.0rc2.js'], 'js');
             } else {
                 // minified version of css
                 out(['styles-wide.min.css'], 'css');

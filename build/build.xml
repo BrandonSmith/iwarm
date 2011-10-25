@@ -42,7 +42,7 @@
 
     <target name="build-css">
         <concat destfile="${FILE}">
-            <fileset file="${CSS_DIR}/jquery.mobile-1.0rc1.css" />
+            <fileset file="${CSS_DIR}/jquery.mobile-1.0rc2.css" />
             <fileset file="${CSS_DIR}/shared.css" />
             <fileset file="${CSS_DIR}/${TYPE}.css" />
         </concat>
@@ -64,7 +64,7 @@
         <concat destfile="${FILE}">
             <fileset file="${JS_DIR}/iwarm.js" />
             <fileset file="${JS_DIR}/${TYPE}.js" />
-            <fileset file="${JS_DIR}/jquery.mobile-1.0rc1.js" />
+            <fileset file="${JS_DIR}/jquery.mobile-1.0rc2.js" />
         </concat>
         <java jar="${YUI_MIN_JAR}" fork="true">
             <arg value="--type" />

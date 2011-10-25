@@ -159,7 +159,7 @@
         // manually switch to share page... don't trust jQuery Mobile
         share_link.click(function() {
             $.mobile.changePage(share, {
-                changeHash: false,
+                changeHash: false
             });
         });
 
