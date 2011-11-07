@@ -6,7 +6,7 @@ window.wycd = window.wycd || {};
     var options = {
         protocol: 'http:',
         host: 'localhost',
-        path: '/iwarm/widget'
+        path: '/wastes/conserve/tools/iwarm/widgets'
     };
 
     // copy options into own namespace

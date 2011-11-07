@@ -22,12 +22,12 @@
             function out(paths, type) {
                 var str = '';
                 if (type === 'js') {
-                    str += "%3Cscript type='text/javascript' src='javascripts/";
-                    str += paths.join("'%3E%3C/script%3E%3Cscript type='text/javascript' src='javascripts/");
+                    str += "%3Cscript type='text/javascript' src='http://epa.gov/wastes/conserve/tools/iwarm/widgets/scripts/";
+                    str += paths.join("'%3E%3C/script%3E%3Cscript type='text/javascript' src='http://epa.gov/wastes/conserve/tools/iwarm/widgets/scripts/");
                     str += "'%3E%3C/script%3E";
                 } else if (type === 'css') {
-                    str += "%3Clink rel='stylesheet' href='stylesheets/";
-                    str += paths.join("'/%3E%3Clink rel='stylesheet' href='stylesheets/");
+                    str += "%3Clink rel='stylesheet' href='http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/";
+                    str += paths.join("'/%3E%3Clink rel='stylesheet' href='http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/");
                     str += "'/%3E";
                 }
                 document.write(unescape(str));
@@ -74,20 +74,36 @@
     </script>
 </head>
 <body>
-<div data-role="page" id="widget-home" class="listsidebyside blue-background" data-theme="d">
+<noscript>
+    <style>
+        .dynamic {
+            display: none;
+        }
+        #no_javascript {
+            color: #777777;
+            font-size: 18px;
+            width: 750px;
+            margin: 0px auto;
+        }
+    </style>
+    <div id="no_javascript"><p>Phonebooth requires JavaScript to be fully functional. <a href="http://www.enable-javascript.com/" target="_blank">Click here for instructions to enable JavaScript in your web browser</a>.</p> <p>Once you&apos;ve enabled JavaScript, simply refresh this page and you&apos;ll be able to login.</p></div>
+</noscript>
+<div data-role="page" id="widget-home" class="dynamic listsidebyside blue-background" data-theme="d">
     <div data-role="content">
         <div class="ui-grid-a splitter">
         <div class="ui-block-a">
             <h1 class="by-recycling">
                 <span>Save energy by recycling</span>
-                <img src="images/icons/header-2.png" alt="Save energy by recycling" />
+                <img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images//header-wide.png" alt="Save energy by recycling" />
             </h1>
             <div class="learn-more">
                 <div>Make more calculations with</div>
-                <div><a href="http://www.epa.gov/iwarm" target="_blank">EPA's WARM Model Calculator</a></div>
+                <div><a href="http://www.epa.gov/iwarm" target="_top">EPA's WARM Model Calculator</a></div>
+                <!--
                 <div style="margin-top: 5px">
                     <a id="embed_action" href="#" title="Embed this widget on your site">Embed on your site</a>
                 </div>
+                -->
             </div>
         </div>
         <div class="ui-block-b">
@@ -116,8 +132,8 @@
                             <a href="#" data-type="magazine" data-role="button" data-icon="wycd-magazine">Weekly<br>Magazine</a>
                             <a href="#" data-type="plastic_bag" data-role="button" data-icon="wycd-bag">Plastic<br>Grocery Bag</a>
                         </div>
-                        <span class="help arrow"><img src="images/icons/arrow-right-top.png" alt="choose a recyclable" /></span>
-                        <span class="help title"><img src="images/icons/recyclable-header-1.png" alt="choose a recyclable" /></span>
+                        <span class="help arrow"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/arrow-right-top.png" alt="choose a recyclable" /></span>
+                        <span class="help title"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/recyclable-header-1.png" alt="choose a recyclable" /></span>
                     </div>
                     <div id="appliances" class="block">
                         <div class="list-section horizontal-widget-list" data-role="controlgroup" data-type="horizontal">
@@ -126,8 +142,8 @@
                             <a href="#" data-type="laptop" data-role="button" data-icon="wycd-laptop">Laptop<br>Computer</a>
                             <a href="#" data-type="60W_CFL_lightbulb" data-role="button" data-icon="wycd-lightbulb">60W Equivalent<br>CFL Bulb</a>
                         </div>
-                        <span class="help arrow"><img src="images/icons/arrow-right-bottom.png" alt="power an appliance" /></span>
-                        <span class="help title"><img src="images/icons/appliance-header-1.png" alt="power an appliance" /></span>
+                        <span class="help arrow"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/arrow-right-bottom.png" alt="power an appliance" /></span>
+                        <span class="help title"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/appliance-header-1.png" alt="power an appliance" /></span>
                     </div>
                 </div>
                 <div id="comparison" class="ui-block-b comparison-container hidden">
@@ -142,7 +158,7 @@
                             </div>
                         </div>
                         <div class="ui-block-b big-arrow" align="center">
-                            <!--<img src="images/icons/arrow.png" />-->
+                            <!--<img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/arrow.png" />-->
                         </div>
                         <div class="ui-block-c">
                             <div class="comparison appliances">
@@ -162,8 +178,8 @@
                 <div id="share-section" class="ui-block-c">
                     <h6>Share results</h6>
                     <div align="center">
-                    <a id="twitter" href="#" data-role="button" data-theme="c" data-icon="iwarm-twitter" data-iconpos="notext" target="_blank">Twitter</a>
-                    <a id="facebook" href="#" data-role="button" data-theme="b" data-icon="iwarm-facebook" data-iconpos="notext" target="_blank">Facebook</a>
+                    <a id="twitter" href="#" data-role="button" data-theme="c" data-icon="iwarm-twitter" data-iconpos="notext" target="_top">Twitter</a>
+                    <a id="facebook" href="#" data-role="button" data-theme="b" data-icon="iwarm-facebook" data-iconpos="notext" target="_top">Facebook</a>
                     </div>
                 </div>
             </div>
