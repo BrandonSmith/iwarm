@@ -2,15 +2,15 @@
 <project name="WYCD" default="minify" basedir="..">
     <description>Concatenates and builds the minified versions of JS and CSS files</description>
 
-    <property name="PREFIX"    location="${basedir}/widget" />
+    <property name="PREFIX"    location="${basedir}/widgets" />
     <property name="JAVA_LIB_DIR" location="${basedir}/build/tools" />
     <property name="YUI_MIN_JAR"  location="${JAVA_LIB_DIR}/yuicompressor-2.4.1.jar" />
-    <property name="CSS_DIR"      location="${PREFIX}/stylesheets" />
+    <property name="CSS_DIR"      location="${PREFIX}/styles" />
     <property name="CSS_WIDE"     location="${CSS_DIR}/styles-wide.css" />
     <property name="CSS_WIDE_MIN" location="${CSS_DIR}/styles-wide.min.css" />
     <property name="CSS_TALL"     location="${CSS_DIR}/styles-tall.css" />
     <property name="CSS_TALL_MIN" location="${CSS_DIR}/styles-tall.min.css" />
-    <property name="JS_DIR"       location="${PREFIX}/javascripts" />
+    <property name="JS_DIR"       location="${PREFIX}/scripts" />
     <property name="JS_WIDE"      location="${JS_DIR}/widget-wide.js" />
     <property name="JS_WIDE_MIN"  location="${JS_DIR}/widget-wide.min.js" />
     <property name="JS_TALL"      location="${JS_DIR}/widget-tall.js" />
