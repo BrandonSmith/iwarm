@@ -23,7 +23,7 @@
                 var str = '';
                 if (type === 'js') {
                     str += "%3Cscript type='text/javascript' src='http://epa.gov/wastes/conserve/tools/iwarm/widgets/scripts/";
-                    str += paths.join("'%3E%3C/script%3E%3Cscript type='text/javascript' src='http://epa.gov/wastes/conserve/tools/iwarm/widgetsscripts/");
+                    str += paths.join("'%3E%3C/script%3E%3Cscript type='text/javascript' src='http://epa.gov/wastes/conserve/tools/iwarm/widgets/scripts/");
                     str += "'%3E%3C/script%3E";
                 } else if (type === 'css') {
                     str += "%3Clink rel='stylesheet' href='http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/";
@@ -71,6 +71,26 @@
             }
         }(window.wycd));
     </script>
+    <noscript>
+        <link rel='stylesheet' href='http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/styles-tall.min.css' />
+        <style>
+            .no_script {
+                display: block;
+            }
+            .dynamic {
+                display: none;
+            }
+            .no_script {
+                color: #777777;
+                font-size: 18px;
+                padding-top: 150px;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </noscript>
 </head>
 <body>
 <div data-role="page" id="widget-home" class="listsidebyside" data-theme="d">
@@ -80,7 +100,13 @@
             <img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/header-tall.png" alt="Save energy by recycling">
         </h1>
     </div>
-    <div data-role="content">
+    <noscript>
+        <div data-role="content" class="ui-content no_script" align="center">
+            Make calculations with<br>
+            <a href="http://www.epa.gov/iwarm" target="_top">EPA's WARM Model Calculator</a>
+        </div>
+    </noscript>
+    <div data-role="content" class="dynamic">
         <div class="ui-grid-a">
             <div id="recyclables" class="ui-block-a block">
                 <div class="list-section">
@@ -140,7 +166,7 @@
         </div>
     
     </div>
-    <div data-role="footer" data-theme="b" data-id="footer" data-position="fixed">
+    <div data-role="footer" data-theme="b" data-id="footer" data-position="fixed" class="dynamic">
         <div data-role="navbar">
             <ul>
                 <li><a class="share-link" href="#">Share your results</a></li>
@@ -150,7 +176,7 @@
     </div>
 </div>
 
-<div data-role="page" id="share" data-theme="d">
+<div data-role="page" id="share" data-theme="d" class="dynamic">
     <div data-role="header" data-theme="b">
         <a id="share-back" href="#" data-role="button" data-icon="arrow-l">Back</a>
         <h1>Share</h1>
