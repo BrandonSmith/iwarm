@@ -1,3 +1,7 @@
+.no_script {
+    display: none;
+}
+
 .ie7 #facebook.ui-btn-up-b .ui-icon, .ie8 #facebook.ui-btn-up-b .ui-icon {
     background-color: #2567AB;
 }

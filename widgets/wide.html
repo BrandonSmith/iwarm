@@ -72,23 +72,12 @@
             }
         }(window.wycd));
     </script>
+    <noscript>
+        <link rel='stylesheet' href='http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/styles-wide.min.css' />
+    </noscript>
 </head>
 <body>
-<noscript>
-    <style>
-        .dynamic {
-            display: none;
-        }
-        #no_javascript {
-            color: #777777;
-            font-size: 18px;
-            width: 750px;
-            margin: 0px auto;
-        }
-    </style>
-    <div id="no_javascript"><p>Phonebooth requires JavaScript to be fully functional. <a href="http://www.enable-javascript.com/" target="_blank">Click here for instructions to enable JavaScript in your web browser</a>.</p> <p>Once you&apos;ve enabled JavaScript, simply refresh this page and you&apos;ll be able to login.</p></div>
-</noscript>
-<div data-role="page" id="widget-home" class="dynamic listsidebyside blue-background" data-theme="d">
+<div data-role="page" id="widget-home" class="listsidebyside blue-background" data-theme="d">
     <div data-role="content">
         <div class="ui-grid-a splitter">
         <div class="ui-block-a">
@@ -106,7 +95,33 @@
                 -->
             </div>
         </div>
-        <div class="ui-block-b">
+        <noscript>
+            <style>
+                .ui-block-a {
+                    background-color: #254F7A;
+                }
+                .dynamic {
+                    display: none;
+                }
+                .learn-more {
+                    font-size: 16px;
+                    text-shadow: 0 0 0 #fff;
+                    color: #fff
+                }
+                .learn-more a {
+                    color: #fff;
+                }
+                .no_script {
+                    color: #777777;
+                    font-size: 18px;
+                    width: 750px;
+                    margin: 0px auto;
+                }
+            </style>
+            <div class="no_script ui-block-b">
+            </div>
+        </noscript>
+        <div class="dynamic ui-block-b">
             <div class="ui-grid-b sizer">
                 <div id="embed" class="ui-block-a hidden">
                     <div class="ui-grid-b">
