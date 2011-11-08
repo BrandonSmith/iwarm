@@ -38,7 +38,7 @@ window.wycd = window.wycd || {};
         },
         init: function(type) {
             var widgetType = type || 'tall',
-                url = w.options.protocol + w.options.host + w.options.path + this[widgetType].path + serializeOptions(),
+                url = w.options.protocol + w.options.host + w.options.path + this[widgetType].path + '?debug=true', // + serializeOptions(),
                 browser = BrowserDetect.browser+BrowserDetect.version,
                 dimensions = this[widgetType][browser],
                 iframe = '<div style="line-height:0"><iframe src="'+url+'" width="'+dimensions.width+'" height="'+dimensions.height+'" scrolling="no" seamless="seamless" frameBorder="0" style="border: 1px solid #000;"></iframe></div>';
