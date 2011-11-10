@@ -25,11 +25,14 @@
         embed_link;
 
     // sharing text templates
-    var share_template = "By recycling $quantity$ $rec_name$, I saved enough energy to power $app_name$ for $hours$ hours."
-    var empty_template = "Make your own calculations with our iWARM widget!"
+    var share_template = "By recycling $quantity$ $rec_name$, I saved enough energy to power $app_name$ for $hours$ hours. ";
+    var empty_template = "Make your own calculations with our iWARM widget!";
+    var f_suffix = empty_template;
+    var t_suffix = "Calculate here: ";
+    var twitter_prefix = "How much energy can you save by recycling? ";
     // returns dynamic sharing based on whether the user has selected or not
     // selected
-    var get_share_text = function() {
+    var get_share_text = function(t) {
         var share_text;
         if (recyclable.selected && appliance.selected) {
             // user has selected, populate the template
@@ -44,9 +47,10 @@
             share_text = share_text.replace('$rec_name$', rec_name);
             share_text = share_text.replace('$app_name$', 'a' + (appliance.selected === 'home_air_conditioner' ? 'n' : '') + ' ' + app_name);
             share_text = share_text.replace('$hours$', hours.toFixed(1));
+            share_text += (t ? t_suffix : f_suffix);
         } else {
             // user has NOT selected, return basic template
-            share_text = empty_template;
+            share_text = (t ? twitter_prefix : '') + empty_template;
         }
         return share_text;
     };
@@ -109,8 +113,8 @@
         var twitter = $('#twitter'),
             facebook = $('#facebook');
 
-        twitter.attr('href', 'https://twitter.com/share?url=http://www.epa.gov/iwarm&text='+encodeURIComponent(get_share_text()));
-        facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&display=page&link=http://www.epa.gov/wastes/conserve/tools/iwarm/widgets/&picture=http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/epa-for-facebook.png&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epa.gov/wastes/conserve/tools/iwarm/widgets/&description=&caption='+encodeURIComponent(get_share_text()));
+        twitter.attr('href', 'https://twitter.com/share?url=http://www.epa.gov/iwarm&text='+encodeURIComponent(get_share_text(true)));
+        facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&display=page&link=http://www.epa.gov/wastes/conserve/tools/iwarm/widgets/&picture=http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/epa-for-facebook.png&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epa.gov/wastes/conserve/tools/iwarm/widgets/&description=%20&caption='+encodeURIComponent(get_share_text(false)));
     });
 
     // home page setup
