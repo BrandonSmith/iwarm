@@ -161,8 +161,8 @@
 
         // sharing template setup function
         var do_share_links = function() {
-            twitter.attr('href', 'https://twitter.com/share?url=http://1.usa.gov/mS5mrg&text='+encodeURIComponent(get_share_text()));
-            facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&display=popup&link=http://epa.gov/wastes/conserve/tools/iwarm/widgets/&picture=http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/epa-for-facebook.png&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epa.gov/wastes/conserve/tools/iwarm/widgets/&description=&caption='+encodeURIComponent(get_share_text()));
+            twitter.attr('href', 'https://twitter.com/share?url=http://www.epa.gov/iwarm&text='+encodeURIComponent(get_share_text()));
+            facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&display=page&link=https://www.epa.gov/wastes/conserve/tools/iwarm/widgets/&picture=http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/epa-for-facebook.png&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epa.gov/wastes/conserve/tools/iwarm/widgets/&description=&caption='+encodeURIComponent(get_share_text()));
         };
         do_share_links(); // call initially to ensure some content... will change after selection made
 
