@@ -25,8 +25,8 @@
         back;
 
     // sharing text templates
-    var share_template = "By recycling $quantity$ $rec_name$, I saved enough energy to power $app_name$ for $hours$ hours. Calculate here:";
-    var empty_template = "Calculate your energy savings here: ";
+    var share_template = "By recycling $quantity$ $rec_name$, I saved enough energy to power $app_name$ for $hours$ hours.";
+    var empty_template = "Make your own calculations with our iWARM widget!";
     // returns dynamic sharing based on whether the user has selected or not
     // selected
     var get_share_text = function() {
