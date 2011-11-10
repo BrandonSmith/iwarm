@@ -24,9 +24,6 @@
     margin: 20px 0 10px 0;
     font-size: 14px;
 }
-.ui-navbar li .ui-btn {
-    font-size: 10px;
-}
 .ui-li .ui-btn-text a.ui-link-inherit {
     text-overflow: clip;
 }
