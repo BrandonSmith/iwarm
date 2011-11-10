@@ -110,7 +110,7 @@
             facebook = $('#facebook');
 
         twitter.attr('href', 'https://twitter.com/share?url=http://1.usa.gov/mS5mrg&text='+encodeURIComponent(get_share_text()));
-        facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&display=popup&link=http://16cards.com&picture=http://epastaging.michaeldbaker.com/orcr/images/epa_seal.gif&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epastaging.michaeldbaker.com/orcr/widget.html&description=&caption='+encodeURIComponent(get_share_text()));
+        facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=148678911893871&display=popup&link=http://epa.gov/wastes/conserve/tools/iwarm/widgets/&picture=http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/epa-for-facebook.png&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epa.gov/wastes/conserve/tools/iwarm/widgets/&description=&caption='+encodeURIComponent(get_share_text()));
     });
 
     // home page setup
