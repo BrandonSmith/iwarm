@@ -311,14 +311,7 @@
             }
         });
         // change the embed code dynamically
-        $('#copy-code').val(w.ShareTemplate.replace('%%TYPE%%', 'tall'));
+        //$('#copy-code').val(w.ShareTemplate.replace('%%TYPE%%', 'tall'));
     });
 }(jQuery, wycd));
 
-// Facebook setup
-window.fbAsyncInit = function() {
-    FB.init({
-      appId  : '148678911893871',
-      status : false
-    });
-};
