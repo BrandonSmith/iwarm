@@ -1,0 +1,16 @@
+.no_script {
+    display: block;
+}
+.dynamic {
+    display: none;
+}
+.no_script {
+    color: #777777;
+    font-size: 18px;
+    padding-top: 150px;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+

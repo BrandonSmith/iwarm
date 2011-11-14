@@ -10,86 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WYCD EPA</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script type="text/javascript">
-            // if jQuery does not exist, CDN above has failed, use local as failsafe
-            if (typeof jQuery === "undefined") {
-                document.write(unescape("%3Cscript src='scripts/jquery-1.6.2.min.js' type='text/javascript'%3E%3C/script%3E"));
-            }
-    </script>
-    <script type="text/javascript">
-        window.wycd = window.wycd || {};
-        (function(w) {
-            function out(paths, type) {
-                var str = '';
-                if (type === 'js') {
-                    str += "%3Cscript type='text/javascript' src='http://epa.gov/wastes/conserve/tools/iwarm/widgets/scripts/";
-                    str += paths.join("'%3E%3C/script%3E%3Cscript type='text/javascript' src='http://epa.gov/wastes/conserve/tools/iwarm/widgets/scripts/");
-                    str += "'%3E%3C/script%3E";
-                } else if (type === 'css') {
-                    str += "%3Clink rel='stylesheet' href='http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/";
-                    str += paths.join("'/%3E%3Clink rel='stylesheet' href='http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/");
-                    str += "'/%3E";
-                }
-                document.write(unescape(str));
-            }
-            function parseOptions(query) {
-                var params = {};
-                query = query.replace(/^\?/,'');
-                if (!query) return params;
-                var pairs = query.split(/[;&]/);
-                for (var i=0; i<pairs.length; i++) {
-                    var key_val = pairs[i].split('=');
-                    if (!key_val || key_val.length!=2) continue;
-                    var key = unescape(key_val[0]);
-                    var val = unescape(key_val[1]).replace(/\+/g,' ');
-                    if (key === 'debug') {
-                        if ((/^true$/i).test(val)) {
-                            val = true;
-                        } else {
-                            val = false;
-                        }
-                    }
-                    params[key] = val;
-                }
-                return params;
-            }
-            w.options = parseOptions(window.location.search);
-
-            // merge defaults + passed in options
-            w.options = $.extend({debug: false}, w.options);
-
-            if (w.options.debug) {
-                // debug version of css
-                out(['jquery.mobile-1.0rc2.css','shared.css','tall.css'], 'css');
-                // debug version of js
-                out(['iwarm.js','tall.js','jquery.mobile-1.0rc2.js'], 'js');
-            } else {
-                // minified version of css
-                out(['styles-tall.min.css'], 'css');
-                // minified version of js
-                out(['widget-tall.min.js'], 'js');
-            }
-        }(window.wycd));
-    </script>
+    <link rel="stylesheet" href="http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/styles-tall.min.css"></link>
+    <script type="text/javascript" src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/scripts/widget-tall.min.js"></script>
     <noscript>
-        <link rel='stylesheet' href='http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/styles-tall.min.css' />
-        <style>
-            .no_script {
-                display: block;
-            }
-            .dynamic {
-                display: none;
-            }
-            .no_script {
-                color: #777777;
-                font-size: 18px;
-                padding-top: 150px;
-            }
-            body {
-                margin: 0;
-                padding: 0;
-            }
-        </style>
+        <link rel="stylesheet" href="http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/tall-noscript.css"></link>
     </noscript>
 </head>
 <body>

@@ -1,0 +1,14 @@
+            .ui-block-a {
+                background-color: #5B84AD;
+            }
+            .dynamic {
+                display: none;
+            }
+            .learn-more {
+                font-size: 16px;
+                text-shadow: 0 0 0 #fff;
+                color: #fff
+            }
+            .learn-more a {
+                color: #fff;
+            }
