@@ -114,7 +114,7 @@
             facebook = $('#facebook');
 
         twitter.attr('href', 'https://twitter.com/share?url=http://www.epa.gov/iwarm&text='+encodeURIComponent(get_share_text(true)));
-        facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=232297670169625&display=page&link=http://www.epa.gov/wastes/conserve/tools/iwarm/widgets/&picture=http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/epa-for-facebook.png&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epa.gov/wastes/conserve/tools/iwarm/widgets/&description=%20&caption='+encodeURIComponent(get_share_text(false)));
+        facebook.attr('href', 'https://www.facebook.com/dialog/feed?app_id=232297670169625&display=page&link=http://www.epa.gov/wastes/conserve/tools/iwarm/widgets/&picture=http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/iWarm_logo.png&name=How Much Energy Can You Save by Recycling?&redirect_uri=http://epa.gov/wastes/conserve/tools/iwarm/widgets/&description=%20&caption='+encodeURIComponent(get_share_text(false)));
     });
 
     // home page setup
