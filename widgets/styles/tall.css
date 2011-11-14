@@ -1,3 +1,8 @@
+.ui-content {
+    border-left: 1px solid #456F9A;
+    border-right: 1px solid #456F9A;
+}
+
 .ie7 .choose .arrow {
     display:none;
 }
@@ -58,7 +63,7 @@ h1.by-recycling span {
 }
 
 .listsidebyside .ui-block-b .list-section {
-    border-left: 1px solid #333;
+    border-left: 1px solid #456F9A;
 }
 
 .listsidebyside .ui-content .comparison-container .ui-block-b {
