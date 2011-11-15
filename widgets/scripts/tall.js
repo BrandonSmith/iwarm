@@ -118,7 +118,7 @@
     });
 
     // home page setup
-    $('#widget-home').live('pagecreate', function() {
+    $('#widget-home').live('pageinit', function() {
         // remove all page header text... doesn't look nice and we are using
         // images on the home page anyways
         var headers = $('div[data-role=header] h1');
@@ -312,6 +312,12 @@
         });
         // change the embed code dynamically
         //$('#copy-code').val(w.ShareTemplate.replace('%%TYPE%%', 'tall'));
+
+        // let widgetbox know everything is done loading
+        //setTimeout(function() {
+        //    WIDGETBOX.publisher.Main.setWidgetLoaded();
+        //}, 1000);
     });
+
 }(jQuery, wycd));
 
