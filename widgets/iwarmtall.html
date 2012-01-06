@@ -5,16 +5,17 @@
 <!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-
+    <base href="http://epa.gov/wastes/conserve/tools/iwarm/widgets/iwarmtall.html" />
+    <!--<base href="http://epastaging.michaeldbaker.com/orcr/widget/iwarmtall.html" />-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WYCD EPA</title>
-    <script type="text/javascript" src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/scripts/jquery-1.6.2.min.js"></script>
-    <link rel="stylesheet" href="http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/styles-tall.min.css"></link>
+    <script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
+    <link rel="stylesheet" href="styles/styles-tall.css"></link>
     <script type="text/javascript" src="http://widgetserver.com/syndication/publisher/Main.js"></script>
-    <script type="text/javascript" src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/scripts/widget-tall.min.js"></script>
+    <script type="text/javascript" src="scripts/widget-tall.js"></script>
     <noscript>
-        <link rel="stylesheet" href="http://epa.gov/wastes/conserve/tools/iwarm/widgets/styles/tall-noscript.css"></link>
+        <link rel="stylesheet" href="styles/tall-noscript.css"></link>
     </noscript>
 </head>
 <body>
@@ -22,7 +23,7 @@
     <div class="ui-header ui-bar-f">
         <h1 class="by-recycling">
             <span>Save energy by recycling</span>
-            <img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/header-tall.png" alt="Save energy by recycling">
+            <img src="images/header-tall.png" alt="Save energy by recycling">
         </h1>
     </div>
     <noscript>
@@ -35,24 +36,24 @@
         <div class="ui-grid-a">
             <div id="recyclables" class="ui-block-a block">
                 <div class="list-section">
-                    <div class="choose"><span class="arrow"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/arrow-down.png" alt="select recyclable" /></span><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/recyclable-header.png" alt="choose a recyclable" /></div>
+                    <div class="choose"><span class="arrow"><img src="images/icons/arrow-down.png" alt="select recyclable" /></span><img src="images/icons/recyclable-header.png" alt="choose a recyclable" /></div>
                     <ul data-role="listview" class="widget-list" data-theme="d">
-                        <li><a href="#" data-type="aluminum_can"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/can.png" alt="Aluminum Can" class="ui-li-icon"/>Aluminum <br>Can</a></li>
-                        <li><a href="#" data-type="glass_bottle"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/glass_bottle.png" alt="Glass Bottle" class="ui-li-icon"/>Glass Bottle</a></li>
-                        <li><a href="#" data-type="plastic_bottle"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/plastic_bottle.png" alt="Plastic Bottle" class="ui-li-icon"/>Plastic Bottle</a></li>
-                        <li><a href="#" data-type="magazine"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/magazine.png" alt="Weekly Magazine" class="ui-li-icon"/>Weekly<br>Magazine</a></li>
-                        <li><a href="#" data-type="plastic_bag"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/bag.png" alt="Plastic Grocery Bag" class="ui-li-icon"/>Plastic <br>Grocery Bag</a></li>
+                        <li><a href="#" data-type="aluminum_can"><img src="images/icons/can.png" alt="Aluminum Can" class="ui-li-icon"/>Aluminum <br>Can</a></li>
+                        <li><a href="#" data-type="glass_bottle"><img src="images/icons/glass_bottle.png" alt="Glass Bottle" class="ui-li-icon"/>Glass Bottle</a></li>
+                        <li><a href="#" data-type="plastic_bottle"><img src="images/icons/plastic_bottle.png" alt="Plastic Bottle" class="ui-li-icon"/>Plastic Bottle</a></li>
+                        <li><a href="#" data-type="magazine"><img src="images/icons/magazine.png" alt="Weekly Magazine" class="ui-li-icon"/>Weekly<br>Magazine</a></li>
+                        <li><a href="#" data-type="plastic_bag"><img src="images/icons/bag.png" alt="Plastic Grocery Bag" class="ui-li-icon"/>Plastic <br>Grocery Bag</a></li>
                     </ul>
                 </div>
             </div>
             <div id="appliances" class="ui-block-b block">
                 <div class="list-section">
-                    <div class="choose"><span class="arrow"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/arrow-down.png" alt="select recyclable" /></span><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/appliance-header.png" alt="choose a recyclable" /></div>
+                    <div class="choose"><span class="arrow"><img src="images/icons/arrow-down.png" alt="select recyclable" /></span><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/appliance-header.png" alt="choose a recyclable" /></div>
                     <ul data-role="listview" class="widget-list" data-theme="d">
-                        <li><a href="#" data-type="home_air_conditioner"><img  src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/fan2.gif" alt="Air Conditioner" class="ui-li-icon air-cond">Air<br>Conditioner</a></li>
-                        <li><a href="#" data-type="hair_dryer"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/hair.png" alt="Hair Dryer" class="ui-li-icon">Hair Dryer</a></li>
-                        <li><a href="#" data-type="laptop"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/laptop.png" alt="Laptop Computer" class="ui-li-icon">Laptop<br>Computer</a></li>
-                        <li><a href="#" data-type="60W_CFL_lightbulb" class="cfl"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/lightbulb-cfl.png" alt="60 Watt CFL Bulb" class="ui-li-icon">60W Equivalent<br>CFL Bulb</a></li>
+                        <li><a href="#" data-type="home_air_conditioner"><img  src="images/icons/fan2.gif" alt="Air Conditioner" class="ui-li-icon air-cond">Air<br>Conditioner</a></li>
+                        <li><a href="#" data-type="hair_dryer"><img src="images/icons/hair.png" alt="Hair Dryer" class="ui-li-icon">Hair Dryer</a></li>
+                        <li><a href="#" data-type="laptop"><img src="images/icons/laptop.png" alt="Laptop Computer" class="ui-li-icon">Laptop<br>Computer</a></li>
+                        <li><a href="#" data-type="60W_CFL_lightbulb" class="cfl"><img src="images/icons/lightbulb-cfl.png" alt="60 Watt CFL Bulb" class="ui-li-icon">60W Equivalent<br>CFL Bulb</a></li>
                         <li style="height:27px;"></li>
                     </ul>
                 </div>
@@ -65,18 +66,21 @@
                     <div class="comparison products">
                         <div>
                             <div class="sentence">recycling</div>
-                            <div id="recyclable-quantity" class="big-number"></div>
+                                <div id="quantity-container" align="right">
+                                    <input type="range" name="quantity" id="quantity" value="10" min="1" max="50" class="big-number" />
+                                </div>
                             <div id="recyclable-name" class="sentence"></div>
+                            <div class="sentence">saves enough energy</div>
                         </div>
                     </div>
                 </div>
                 <div class="ui-block-b big-arrow" align="center">
-                    <!--<img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/arrow.png" />-->
+                    <!--<img src="images/icons/arrow.png" />-->
                 </div>
                 <div class="ui-block-c">
                     <div class="comparison appliances">
                         <div>
-                            <div class="sentence">powers</div>
+                            <div class="sentence">to power</div>
                             <div id="appliance-quantity" class="big-number"></div>
                             <div class="sentence">hours of <span class="no-vowel">a</span><span class="vowel hidden">an</span></div>
                             <div id="appliance-name" class="sentence"></div>
@@ -84,10 +88,9 @@
                     </div>
                 </div>
             </div>
-            <div class="slider-container" align="center">
-                <input type="range" name="quantity" id="quantity" value="10" min="1" max="50" />
+            <div id="slider-container" class="slider-container" align="center">
             </div>
-            <h6 class="choose slide"><span class="arrow"><img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/icons/arrow-up.png" alt="select recyclable" /></span>Slide the button or use your arrow keys to change the number of recyclables.</h6>
+            <h6 class="choose slide"><span class="arrow"><img src="images/icons/arrow-up.png" alt="select recyclable" /></span>Slide the button or type in a number to change the number of recyclables.</h6>
         </div>
     
     </div>
@@ -112,7 +115,7 @@
         <div class="ui-grid-a sharing-section">
             <div class="ui-block-a">
                 <span>
-                    <img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/twitter-medium.png" alt="Twitter" />
+                    <img src="images/twitter-medium.png" alt="Twitter" />
                 </span>
             </div>
             <div class="ui-block-b">
@@ -123,7 +126,7 @@
         <div class="ui-grid-a sharing-section">
             <div class="ui-block-a">
                 <span>
-                    <img src="http://epa.gov/wastes/conserve/tools/iwarm/widgets/images/facebook-medium.png" alt="Facebook" />
+                    <img src="images/facebook-medium.png" alt="Facebook" />
                 </span>
             </div>
             <div class="ui-block-b">

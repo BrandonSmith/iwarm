@@ -5131,9 +5131,9 @@ $.widget( "mobile.slider", $.mobile.widget, {
 			}
 			if ( !isfromControl && valueChanged ) {
 				control.trigger( "change" );
-				if (this.options.change) {
-				    this.options.change.call(this.element, newval);
-				}
+			}
+			if (this.options.change) {
+			    this.options.change.call(this.element, newval);
 			}
 		}
 	},

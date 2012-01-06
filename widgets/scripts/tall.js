@@ -57,7 +57,7 @@
 
     $(document).bind('mobileinit', function() {
         // prevent jQuery Mobile from optimizing quantity page
-        $.mobile.page.prototype.options.keepNative = '#quantity';
+        //$.mobile.page.prototype.options.keepNative = '#quantity';
         // prevent jQuery Mobile from disappearing fixed footers
         $.mobile.fixedToolbars.setTouchToggleEnabled(false);
     });
@@ -67,8 +67,8 @@
         if ($.mobile.activePage.attr('id') === 'widget-home'
                 && recyclable.selected && appliance.selected) {
             // only run logic when the compare page is display
-            var quantity = $('#quantity').val();
-            var slider = $('#quantity').data('slider');
+            var quan = quantity.val();
+            var slider = quantity.data('slider');
             // prevent default action for the following events
             switch ( event.keyCode ) {
                 case $.mobile.keyCode.HOME:
@@ -96,13 +96,13 @@
                 case $.mobile.keyCode.PAGE_UP:
                 case $.mobile.keyCode.UP:
                 case $.mobile.keyCode.RIGHT:
-                    slider.refresh( ~~quantity + 1 );
+                    slider.refresh( ~~quan + 1 );
                 break;
                 // step backward 1
                 case $.mobile.keyCode.PAGE_DOWN:
                 case $.mobile.keyCode.DOWN:
                 case $.mobile.keyCode.LEFT:
-                    slider.refresh( ~~quantity - 1 );
+                    slider.refresh( ~~quan - 1 );
                 break;
             }
         }
@@ -190,7 +190,8 @@
                 app = products.get_appliance(appliance.selected),
                 app_name = app.friendly_name,
                 hours = products.hours_available(recyclable.selected, q, appliance.selected);
-            recyclable_quantity.text(q);
+            quantity.val(q);
+            //recyclable_quantity.text(q);
             recyclable_name.text(rec_name);
             appliance_quantity.text(hours.toFixed(1));
             appliance_name.text(app_name);
@@ -207,6 +208,7 @@
         }
         // bind hind and calculate functionality slider changes
         quantity.slider({change: hide_and_calculate});
+        quantity.siblings('.ui-slider').detach().appendTo('#slider-container');
 
         // checks if both recyclable and appliance are selected...
         // if so, compare UI is displayed

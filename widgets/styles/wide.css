@@ -261,3 +261,12 @@ h1.by-recycling {
 .ui-icon-wycd-lightbulb {
     background-image: url(../images/icons/lightbulb-cfl.png) !important;
 }
+
+.big-number {
+    margin: 2px 0;
+}
+
+input.ui-input-text.big-number {
+    font-size: 2.5em;
+    color: black;
+}
