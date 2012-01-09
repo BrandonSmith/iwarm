@@ -218,6 +218,7 @@
                 }
                 // run calculation logic
                 calculate();
+                quantity.css({width: '60%'});
                 // show compare UI
                 comparison_section.removeClass('hidden');
                 selection_section.addClass('selected');
