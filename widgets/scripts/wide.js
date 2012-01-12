@@ -236,6 +236,9 @@
             }
         };
 
+        var recyclable_selection_hidden = false,
+            appliance_selection_hidden = false;
+
         // recyclables handling
         recyclable_section.find('a').click(function(e) {
             var li = $(this);
@@ -244,9 +247,12 @@
                     title = $('.help'),
                     selected_recyclable = li.attr('data-type'),
                     list_section = recyclable_section.find('.list-section');
+                recyclable_selection_hidden = true;
                 // UI elements setup to hide list and show selected recyclable
                 recyclable.selected = selected_recyclable;
-                title.hide();
+                //title.hide();
+                recyclable_help_title.hide();
+                recyclable_help_arrow.hide();
                 others.hide();
                 li.data('left', li.hasClass('ui-corner-left'));
                 li.data('right', li.hasClass('ui-corner-right'));
@@ -269,7 +275,12 @@
                     others.show().removeClass('ui-btn-hover-d').addClass('ui-btn-up-d');
                     list_section.removeClass('selected');
                     del_section.remove();
+                    if (!appliance_selection_hidden) {
+                        recyclable_help_title.show();
+                        recyclable_help_arrow.show();
+                    }
                     comparison_check();
+                    recyclable_selection_hidden = false;
                 }).button(); // sets up the X button
                 recyclable_section.append(del_section);
 
@@ -288,11 +299,16 @@
                     title = appliance_section.find('.help'),
                     selected_appliance = li.attr('data-type'),
                     list_section = appliance_section.find('.list-section');
+                appliance_selection_hidden = true;
                 // UI elements setup to hide list and show selected appliance
                 appliance.selected = selected_appliance;
-                title.hide();
-                recyclable_help_title.hide();
-                recyclable_help_arrow.hide();
+                //title.hide();
+                appliance_help_title.hide();
+                appliance_help_arrow.hide();
+                if (!recyclable_selection_hidden) {
+                    recyclable_help_title.hide();
+                    recyclable_help_arrow.hide();
+                }
                 others.hide();
                 li.data('left', li.hasClass('ui-corner-left'));
                 li.data('right', li.hasClass('ui-corner-right'));
@@ -315,7 +331,14 @@
                     others.show().removeClass('ui-btn-hover-d').addClass('ui-btn-up-d');
                     list_section.removeClass('selected');
                     del_section.remove();
+                    appliance_help_title.show();
+                    appliance_help_arrow.show();
+                    if (!recyclable_selection_hidden) {
+                        recyclable_help_title.show();
+                        recyclable_help_arrow.show();
+                    }
                     comparison_check();
+                    appliance_selection_hidden = false;
                 }).button(); // sets up the X button
 
                 // swap UI show/hide

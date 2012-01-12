@@ -229,7 +229,7 @@
                 // dynamically resize text
                 $(".sentence").fitText(1, { minFontSize: '12px' }); //, maxFontSize: '36px'
                 $(".big-number").fitText(0.5, { minFontSize: '32px' }); //, maxFontSize: '120px'
-                quantity.css({width: '40%'});
+                quantity.css({width: '60%'});
                 // position slider help arrows
                 var arrow = $('.arrow', choose_header);
                 var slider_btn = $('.ui-slider-handle');
